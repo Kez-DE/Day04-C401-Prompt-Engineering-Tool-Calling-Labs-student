@@ -2,8 +2,10 @@
 
 ## Team
 
-- Team: AI20k Day04
-- Members: QuocAnh-0710
+- Team: Zone 7 Team 3
+- Members: Lê Quốc Anh 2A202600824
+           Nguyễn Đức Khang - 2A202600588
+           Nguyễn Đức Mạnh -  2A202600945
 - Provider/model: openrouter / openai/gpt-4o-mini
 
 ## Final Metrics
