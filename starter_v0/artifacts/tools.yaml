@@ -139,3 +139,24 @@ tools:
         max_pages: {type: integer, default: 5, description: "Số trang"}
         max_chars: {type: integer, default: 8000, description: "Số ký tự"}
       required: [arxiv_url]
+<<<<<<< Updated upstream
+=======
+
+  - name: github_analyzer
+    description: "Phân tích và lấy thông tin chi tiết của một mã nguồn mở trên GitHub."
+    parameters:
+      type: object
+      properties:
+        repo_url: {type: string, description: "Đường link tới Github repository (vd: https://github.com/owner/repo)"}
+      required: [repo_url]
+
+  - name: wikipedia
+    description: "Tìm kiếm và tóm tắt thông tin từ Wikipedia. Dùng khi cần tra cứu khái niệm, sự kiện, nhân vật, địa danh hoặc kiến thức bách khoa."
+    parameters:
+      type: object
+      properties:
+        query: {type: string, default: "", description: "Từ khóa hoặc chủ đề cần tìm"}
+        lang: {type: string, enum: [vi, en, fr, de, es, ja, zh], default: "vi", description: "Ngôn ngữ Wikipedia"}
+        max_results: {type: integer, default: 3, description: "Số bài viết trả về (tối đa 5)"}
+      required: [query]
+>>>>>>> Stashed changes
