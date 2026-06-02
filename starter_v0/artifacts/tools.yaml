@@ -118,6 +118,15 @@ tools:
         repo_url: {type: string, default: "", description: "Exact GitHub repository URL, e.g. https://github.com/owner/repo."}
       required: [repo_url]
 
+  - name: claim_checker
+    description: "Assess whether a factual claim is safe enough for a public brief, Telegram post, or external summary. Use when the user asks if a claim can be published, what evidence is needed, or whether wording is risky. This does not verify the claim; it classifies risk and required evidence."
+    parameters:
+      type: object
+      properties:
+        claim: {type: string, default: "", description: "The factual claim or proposed public statement to assess."}
+        context: {type: string, default: "", description: "Publishing context, e.g. public Telegram briefing, internal notes, research digest."}
+      required: [claim]
+
   - name: policy
     description: "Search internal company policy markdown. Use for company rules about source citation, privacy, research workflow, publishing, Telegram approval, or tool usage. Do not use public web for internal policy."
     parameters:

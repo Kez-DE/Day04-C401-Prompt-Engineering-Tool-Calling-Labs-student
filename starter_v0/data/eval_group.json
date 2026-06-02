@@ -68,6 +68,15 @@
       "metadata": {"what_it_tests": "GitHub repository URL and stats request should use github_analyzer."}
     },
     {
+      "id": "G08_claim_checker_publish",
+      "phase": "B",
+      "suite": "group",
+      "query": "Claim này có đủ an toàn để đăng public không: GPT-5 beats all current coding models.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "claim_checker", "args": {}}]},
+      "metadata": {"what_it_tests": "Public publish-readiness question about a factual claim should use claim_checker."}
+    },
+    {
       "id": "GM01_rank_sources_carryover",
       "phase": "B",
       "suite": "group",
