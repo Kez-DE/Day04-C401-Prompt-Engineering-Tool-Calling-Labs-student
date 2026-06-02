@@ -200,6 +200,28 @@ Direct tool test (verifies the bot token/chat only):
 python -c "from tools import TOOL_FUNCTIONS as T; print(T['send']('AI20k test message', confirmed=True))"
 ```
 
+### Chat With The Agent In Telegram
+
+The `send` tool posts to a channel. For two-way chat with the research agent,
+run the polling bot from `starter_v0/`:
+
+```bash
+python telegram_bot.py \
+  --provider openrouter \
+  --model openai/gpt-oss-120b:free \
+  --version v3 \
+  --skip-old
+```
+
+For safer local testing, restrict replies to one chat:
+
+```bash
+TELEGRAM_ALLOWED_CHAT_ID=123456789
+```
+
+Send `/start` to the bot, then chat normally. Send `/reset` to clear the bot's
+in-memory context for that Telegram chat.
+
 ## Final Checklist
 
 Before class, at least one person per group should have:

@@ -3,5 +3,116 @@
   "dataset_role": "group",
   "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {
+      "id": "G01_rank_sources",
+      "phase": "B",
+      "suite": "group",
+      "query": "Xếp hạng độ tin cậy của các nguồn này cho bản tin AI: OpenAI official blog, một tweet viral, Reuters.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "source_ranker", "args": {}}]},
+      "metadata": {"what_it_tests": "Tool mới source_ranker cho yêu cầu xếp hạng độ tin cậy nguồn đã biết."}
+    },
+    {
+      "id": "G02_policy_privacy",
+      "phase": "B",
+      "suite": "group",
+      "query": "Theo policy công ty, có được đưa API key vào transcript lab không?",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "policy", "args": {"policy_area": "data_privacy"}}]},
+      "metadata": {"what_it_tests": "Câu hỏi policy nội bộ về API key/privacy phải dùng policy, không dùng lookup."}
+    },
+    {
+      "id": "G03_arxiv_discovery",
+      "phase": "B",
+      "suite": "group",
+      "query": "Tìm paper arXiv mới về tool calling evaluation.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "papers", "args": {}}]},
+      "metadata": {"what_it_tests": "Paper discovery trên arXiv phải dùng papers."}
+    },
+    {
+      "id": "G04_specific_arxiv_text",
+      "phase": "B",
+      "suite": "group",
+      "query": "Đọc arXiv 1706.03762 và lấy text 2 trang đầu.",
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "paper_text", "args": {"arxiv_url": "1706.03762", "max_pages": 2}}]},
+      "metadata": {"what_it_tests": "Có arXiv ID cụ thể và yêu cầu đọc text thì dùng paper_text với max_pages đúng."}
+    },
+    {
+      "id": "G05_meta_no_tool",
+      "phase": "B",
+      "suite": "group",
+      "query": "Bạn có những tool nào?",
+      "failure_type": "unnecessary_tool",
+      "expect": {"no_tool": true, "behavior": "answer_without_tool"},
+      "metadata": {"what_it_tests": "Câu hỏi meta về capability thì trả lời trực tiếp, không gọi tool."}
+    },
+    {
+      "id": "GM01_rank_sources_carryover",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Mình có các nguồn: OpenAI docs, tweet viral, Reuters."},
+        {"role": "user", "content": "Hãy xếp hạng độ tin cậy cho claim về AI release."},
+        {"role": "user", "content": "Giữ đúng ba nguồn đó."}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "source_ranker", "args": {}}]},
+      "metadata": {"what_it_tests": "Multi-turn carry source list và gọi tool mới source_ranker."}
+    },
+    {
+      "id": "GM02_timeline_carry_handle",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Lấy tweet mới nhất của Sam Altman."},
+        {"role": "user", "content": "Lấy 4 tweet thôi."},
+        {"role": "user", "content": "Vẫn của Sam Altman nhé."}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "timeline", "args": {"screenname": "sama", "limit": 4}}]},
+      "metadata": {"what_it_tests": "Carry handle Sam Altman -> sama và override limit trong multi-turn."}
+    },
+    {
+      "id": "GM03_lookup_carry_timeframe",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tin AI hôm nay có gì?"},
+        {"role": "user", "content": "Đổi sang chủ đề chip AI."},
+        {"role": "user", "content": "Vẫn là tin hôm nay."}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {"tool_calls": [{"name": "lookup", "args": {"query": "chip AI", "topic": "news", "timeframe": "day"}}]},
+      "metadata": {"what_it_tests": "Carry timeframe=day/topic=news nhưng đổi query sang chip AI."}
+    },
+    {
+      "id": "GM04_missing_then_url",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Tóm tắt bài này giúp mình."},
+        {"role": "user", "content": "https://openai.com/research/"},
+        {"role": "user", "content": "Chỉ đọc đúng URL đó."}
+      ],
+      "failure_type": "missing_info",
+      "expect": {"tool_calls": [{"name": "fetch", "args": {"url": "https://openai.com/research/"}}]},
+      "metadata": {"what_it_tests": "Sau khi user bổ sung URL, dùng fetch đúng URL."}
+    },
+    {
+      "id": "GM05_send_needs_confirmation",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {"role": "user", "content": "Soạn bản tin AI ngắn cho Telegram."},
+        {"role": "user", "content": "Đăng lên channel giúp mình."},
+        {"role": "user", "content": "Chưa xác nhận nội dung cuối đâu nhé."}
+      ],
+      "failure_type": "wrong_boundary",
+      "expect": {"tool_calls": [{"name": "clarify", "args": {"response_type": "yes_no"}}]},
+      "metadata": {"what_it_tests": "Write action Telegram trong multi-turn vẫn phải hỏi xác nhận yes/no."}
+    }
+  ]
 }

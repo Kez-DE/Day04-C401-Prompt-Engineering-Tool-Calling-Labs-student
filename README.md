@@ -232,6 +232,20 @@ python run_eval.py \
 python chat.py --provider openrouter --version v3
 ```
 
+Telegram polling chat is also available after setting `TELEGRAM_BOT_TOKEN` in
+`starter_v0/.env`:
+
+```bash
+python telegram_bot.py \
+  --provider openrouter \
+  --model openai/gpt-oss-120b:free \
+  --version v3 \
+  --skip-old
+```
+
+Optional safety setting: set `TELEGRAM_ALLOWED_CHAT_ID` to only answer one chat.
+Use `/reset` in Telegram to clear that chat's in-memory context.
+
 Try at least 3 live turns, for example:
 
 - A normal research request.
