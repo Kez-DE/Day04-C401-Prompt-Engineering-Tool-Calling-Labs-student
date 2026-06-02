@@ -100,6 +100,24 @@ tools:
         purpose: {type: string, default: "", description: "Research purpose or claim being evaluated."}
       required: [sources]
 
+  - name: wikipedia
+    description: "Search Wikipedia and return a short encyclopedia summary. Use for background knowledge about a concept, person, event, organization, or topic. Do not use for breaking news, live updates, papers, or specific URLs."
+    parameters:
+      type: object
+      properties:
+        query: {type: string, default: "", description: "Wikipedia search topic, e.g. Transformer neural network or Andrej Karpathy."}
+        lang: {type: string, default: "en", description: "Wikipedia language code. Use vi for Vietnamese if the user asks in Vietnamese and likely needs Vietnamese background."}
+        sentences: {type: integer, default: 5, description: "Number of summary sentences to return."}
+      required: [query]
+
+  - name: github_analyzer
+    description: "Fetch public metadata for a GitHub repository URL: stars, forks, open issues, language, description, and URL. Use when the user asks to inspect/analyze a GitHub repo or asks for repo stats."
+    parameters:
+      type: object
+      properties:
+        repo_url: {type: string, default: "", description: "Exact GitHub repository URL, e.g. https://github.com/owner/repo."}
+      required: [repo_url]
+
   - name: policy
     description: "Search internal company policy markdown. Use for company rules about source citation, privacy, research workflow, publishing, Telegram approval, or tool usage. Do not use public web for internal policy."
     parameters:

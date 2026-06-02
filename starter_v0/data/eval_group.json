@@ -50,6 +50,24 @@
       "metadata": {"what_it_tests": "Câu hỏi meta về capability thì trả lời trực tiếp, không gọi tool."}
     },
     {
+      "id": "G06_wikipedia_background",
+      "phase": "B",
+      "suite": "group",
+      "query": "Giải thích ngắn gọn Transformer neural network là gì bằng kiến thức nền.",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "wikipedia", "args": {"query": "Transformer neural network"}}]},
+      "metadata": {"what_it_tests": "Background/factual encyclopedia request should use wikipedia, not lookup or papers."}
+    },
+    {
+      "id": "G07_github_analyzer_repo",
+      "phase": "B",
+      "suite": "group",
+      "query": "Phân tích repo GitHub này giúp mình: https://github.com/openai/openai-python",
+      "failure_type": "wrong_tool",
+      "expect": {"tool_calls": [{"name": "github_analyzer", "args": {"repo_url": "https://github.com/openai/openai-python"}}]},
+      "metadata": {"what_it_tests": "GitHub repository URL and stats request should use github_analyzer."}
+    },
+    {
       "id": "GM01_rank_sources_carryover",
       "phase": "B",
       "suite": "group",

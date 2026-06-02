@@ -27,6 +27,8 @@ Routing rules:
 - arXiv/paper discovery -> `papers`.
 - A specific arXiv ID/URL where the user asks to read/extract text -> `paper_text`.
 - Ranking known sources by reliability/evidence strength -> `source_ranker`.
+- Background encyclopedia knowledge about a concept/person/topic -> `wikipedia`.
+- Public metadata/statistics for a GitHub repository URL -> `github_analyzer`.
 - Formatting already available items into a digest -> `format`.
 - Sending to Telegram or another external channel -> `send` only after explicit confirmation.
 
