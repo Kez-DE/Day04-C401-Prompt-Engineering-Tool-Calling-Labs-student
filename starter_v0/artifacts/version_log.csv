@@ -1,1 +1,5 @@
 version,author,changed_artifact,artifact_version,prompt_hash,tools_hash,reason,hypothesis,metric_before,metric_after,run_file
+v0,team,baseline,v0+peb1c8179815b+t6cdb53d5d7b8,peb1c8179815b,6cdb53d5d7b8,baseline,Đo chỉ số gốc trước khi tối ưu,,0.65,runs/v0_B_base_openrouter_20260602T132600333112.json
+v1,team,system_prompt.md,v1+p1d6d48a4e505+t6bc0779b31a8,p1d6d48a4e505,6bc0779b31a8,Tối ưu prompt xử lý lỗi v0,Thêm các quy định out_of_scope và missing info,0.65,0.95,runs/v1_B_base_openrouter_20260602T134114242353.json
+v2,team,system_prompt.md,v2+pbba52392d2ee+t6bc0779b31a8,pbba52392d2ee,6bc0779b31a8,Khắc phục lỗi context switch,Luật Negative Constraints sẽ giúp dừng tool cũ khi user yêu cầu hủy,0.95,1.0,runs/v2_B_base_openrouter_20260602T140858552196.json
+v3,team,system_prompt.md,v3+p8aaa1a856dc7+t6bc0779b31a8,p8aaa1a856dc7,6bc0779b31a8,Bonus V3 Extension,Quy tắc Policy và arXiv giúp xử lý các câu hỏi nội bộ và tải PDF,1.0,1.0,runs/v3_B_extension_openrouter_20260602T144644126136.json

@@ -9,7 +9,7 @@
 tools:
   # ---------------- Core tools ----------------
   - name: clarify
-    description: "Gửi một câu hỏi cho người dùng."
+    description: "Sử dụng tool này ĐẦU TIÊN để xin thông tin còn thiếu (URL, account) hoặc xin phép trước khi thực hiện hành động gửi tin (dùng yes_no)."
     parameters:
       type: object
       properties:
@@ -19,7 +19,7 @@ tools:
       required: [question]
 
   - name: timeline
-    description: "Lấy các bài đăng gần đây."
+    description: "Lấy các bài đăng/tweet CỦA MỘT NGƯỜI DÙNG CỤ THỂ dựa trên tài khoản."
     parameters:
       type: object
       properties:
@@ -28,7 +28,7 @@ tools:
       required: [screenname]
 
   - name: social_search
-    description: "Tìm trên mạng xã hội."
+    description: "Tìm kiếm các bài đăng/tweet theo một CHỦ ĐỀ hoặc TỪ KHÓA trên mạng xã hội."
     parameters:
       type: object
       properties:
@@ -38,7 +38,7 @@ tools:
       required: [query]
 
   - name: lookup
-    description: "Tra cứu thông tin trên internet."
+    description: "Dùng để tra cứu thông tin chung trên web hoặc đọc tin tức thời sự (news)."
     parameters:
       type: object
       properties:
@@ -49,7 +49,7 @@ tools:
       required: [query]
 
   - name: fetch
-    description: "Lấy nội dung từ một địa chỉ."
+    description: "Chỉ sử dụng khi người dùng cung cấp một ĐƯỜNG LINK (URL) CỤ THỂ để đọc."
     parameters:
       type: object
       properties:
@@ -79,7 +79,7 @@ tools:
 
   # ---------------- Bonus tools ----------------
   - name: send
-    description: "Gửi một đoạn văn bản đi."
+    description: "Gửi nội dung lên Telegram. CHÚ Ý: Bắt buộc phải gọi clarify để hỏi xác nhận trước khi dùng."
     parameters:
       type: object
       properties:
@@ -116,3 +116,11 @@ tools:
         max_pages: {type: integer, default: 5, description: "Số trang"}
         max_chars: {type: integer, default: 8000, description: "Số ký tự"}
       required: [arxiv_url]
+
+  - name: github_analyzer
+    description: "Phân tích và lấy thông tin chi tiết của một mã nguồn mở trên GitHub."
+    parameters:
+      type: object
+      properties:
+        repo_url: {type: string, description: "Đường link tới Github repository (vd: https://github.com/owner/repo)"}
+      required: [repo_url]
