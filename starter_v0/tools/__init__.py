@@ -21,7 +21,6 @@ from .source_ranker.tool import rank_sources
 from .wikipedia.tool import wikipedia_search
 from .lookup.tool import web_search
 
-
 # NOTE (starter_v0): tool names here are intentionally vague. These keys are the
 # names the model sees AND the names data/eval_base.json + data/eval_research_extension.json
 # match against. If a team renames a tool, it MUST stay in sync across ALL of:

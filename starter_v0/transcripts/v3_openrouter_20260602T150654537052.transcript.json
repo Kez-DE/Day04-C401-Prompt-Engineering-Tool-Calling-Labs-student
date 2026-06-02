@@ -1,0 +1,628 @@
+{
+  "transcript_id": "v3_openrouter_20260602T150654537052",
+  "version": "v3",
+  "artifact_version": "v3+p8aaa1a856dc7+t1c5ce148de36",
+  "prompt_hash": "8aaa1a856dc7f007720441d6303ed58292531f5836d55adfed6c2095a475c5b0",
+  "tools_hash": "1c5ce148de365c4a48b929231113760e698ce5cb6b71e22a2ac68c8d5662e7a5",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-02T15:06:54",
+  "updated_at": "2026-06-02T15:19:52",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-02T15:07:27",
+      "user": "Lấy thống kê cho tôi repo này với: https://github.com/langchain-ai/langchain",
+      "status": "answered",
+      "assistant_text": "Here are the statistics for the GitHub repository [langchain-ai/langchain](https://github.com/langchain-ai/langchain):\n\n- **Description**: The agent engineering platform.\n- **Stars**: 138,294\n- **Forks**: 22,918\n- **Open Issues**: 606\n- **Primary Language**: Python\n\nIf you need more information or specific details, feel free to ask!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "github_analyzer",
+              "args": {
+                "repo_url": "https://github.com/langchain-ai/langchain"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "github_analyzer",
+              "args": {
+                "repo_url": "https://github.com/langchain-ai/langchain"
+              },
+              "result": {
+                "name": "langchain-ai/langchain",
+                "description": "The agent engineering platform.",
+                "stars": 138294,
+                "forks": 22918,
+                "open_issues": 606,
+                "language": "Python",
+                "url": "https://github.com/langchain-ai/langchain"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the statistics for the GitHub repository [langchain-ai/langchain](https://github.com/langchain-ai/langchain):\n\n- **Description**: The agent engineering platform.\n- **Stars**: 138,294\n- **Forks**: 22,918\n- **Open Issues**: 606\n- **Primary Language**: Python\n\nIf you need more information or specific details, feel free to ask!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "github_analyzer",
+          "args": {
+            "repo_url": "https://github.com/langchain-ai/langchain"
+          },
+          "result": {
+            "name": "langchain-ai/langchain",
+            "description": "The agent engineering platform.",
+            "stars": 138294,
+            "forks": 22918,
+            "open_issues": 606,
+            "language": "Python",
+            "url": "https://github.com/langchain-ai/langchain"
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:07:46"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-06-02T15:11:40",
+      "user": "bạn hãy tìm cho tôi thông tin về ca sĩ sơn tùng",
+      "status": "answered",
+      "assistant_text": "Here are the latest updates about Sơn Tùng M-TP:\n\n### News Articles\n1. **[Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada](https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html)**\n   - Sơn Tùng M-TP collaborates with American rapper Tyga on a new single titled “Come My Way,” celebrating Vietnamese heritage. The song bridges Sơn Tùng's global expansion and American hip-hop, with Tyga expressing pride in his Vietnamese roots.\n\n2. **[Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes](https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/)**\n   - Similar to the Yahoo article, this piece highlights the collaboration between Sơn Tùng M-TP and Tyga, emphasizing the cultural significance of their partnership.\n\n### Tweets\n1. **[Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP?](https://x.com/Phuonghong1872/status/2061665705905529092)**\n   - A tweet discussing public reactions to the “Come My Way” campaign featuring Sơn Tùng M-TP.\n\n2. **[@MTPGlobalUnion: Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders”](https://x.com/MTPGlobalUnion/status/2061631324818120865)**\n   - A tweet quoting Sơn Tùng M-TP's aspirations to share his music globally.\n\n3. **[@MTPGlobalUnion: Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.](https://x.com/MTPGlobalUnion/status/2061630806150545692)**\n   - A tweet highlighting Sơn Tùng M-TP's role in promoting Vietnamese culture internationally.\n\n4. **[@MTPGlobalUnion: Forbes magazine published an article titled: Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’](https://x.com/MTPGlobalUnion/status/2061624717199765862)**\n   - A tweet thanking Forbes for covering Sơn Tùng M-TP and his cultural contributions.\n\n5. **[@SonTungBR: “Come My Way” é uma demonstração do crescimento da música vietnamita no cenário mundial](https://x.com/SonTungBR/status/2061588560461918630)**\n   - A tweet discussing the impact of Sơn Tùng M-TP's music on the global stage.\n\nIf you need more specific information or further details, feel free to ask!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 5
+              }
+            },
+            {
+              "name": "social_search",
+              "args": {
+                "query": "Sơn Tùng M-TP",
+                "search_type": "Latest",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada",
+                    "url": "https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html",
+                    "source": "ca.news.yahoo.com",
+                    "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. “Growing up half-Vietnamese, I’ve always had pride in that identity, and being able to celebrate it through music on a global record like this just felt right. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles.",
+                    "score": 0.9953181
+                  },
+                  {
+                    "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes",
+                    "url": "https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/",
+                    "source": "forbes.com",
+                    "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles. Sơn Tùng M-TP x TYGA’s “Come My Way” is out now on all streaming platforms.",
+                    "score": 0.99509466
+                  },
+                  {
+                    "title": "BTS Wins Artist of the Year at American Music Awards: Complete Winners List - Variety Australia",
+                    "url": "https://au.variety.com/2026/music/global/american-music-awards-winners-list-bts-katseye-sombr-golden-36967/",
+                    "source": "au.variety.com",
+                    "summary": "# BTS Wins Artist of the Year at American Music Awards, as Katseye, Sombr, ‘Golden’ Also Score Top Honors: Complete Winners List. Despite missing out in the new artist category, Sombr did not go home empty-handed, following his performance on the show with trips to the podium to pick up awards for Best Rock/Alternative Song, for “Back to Friends,” and Best Rock/Alternative Album, for “I Barely Know Her.”. The fervor for “KPop Demon Hunters” did not go unrewarded, as “Golden” and its singers EJAE, Audrey Nuna and Rei Ami picked up Song of the Year. So Album of the Year was one of the categories not given out on-air; it went to Sabrina Carpenter for “Man’s Best Friend,” one of three awards in all that were revealed as going to her after the broadcast was over. Artist of the Year: BTS. Song of the Year: The Singing Voices of HUNTR/X: EJAE, Audrey Nuna, Rei Ami – “Golden”.",
+                    "score": 0.0060503976
+                  },
+                  {
+                    "title": "Jesse McCartney to perform at senior prom in Bucks County - CBS News",
+                    "url": "https://www.cbsnews.com/philadelphia/video/jesse-mccartney-to-perform-at-senior-prom-in-bucks-county/",
+                    "source": "cbsnews.com",
+                    "summary": "* Send Us a News Tip. # Jesse McCartney to perform at senior prom in Bucks County. 2000s pop singer Jesse McCartney will perform at the senior prom at Pennsbury High School in Fairless Hills, Bucks County this weekend, continuing a tradition of a major headliner taking the stage at what is called \"The Best Prom in America.\".",
+                    "score": 0.00050530455
+                  },
+                  {
+                    "title": "Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It' - AOL.com",
+                    "url": "https://www.aol.com/articles/megan-moroney-performs-wonder-her-150704042.html",
+                    "source": "aol.com",
+                    "summary": "# Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It'. * Megan Moroney performed at her best friend Natalie King's wedding. * Moroney released \"Wonder\" in 2021. The country star performed the first song she ever released at her BFF Natalie King's wedding to Alex Harp on Saturday, May 23, in Turks and Caicos. Moroney, 28, who was designated the influencer's maid of honor, shared footage of the performance of her song \"Wonder\" on TikTok. During her set, where she sported a yellow chiffon dress with her hair in an updo, the \"6 Months Later\" artist told guests that the song was originally written for King, 28, years before. \"I've played this song a lot, but I think that this might be the most meaningful time that I play it,\" said Moroney. \"For those of you who don't know, the first song I ever released was a song written for Natalie.",
+                    "score": 0.00048976566
+                  }
+                ]
+              }
+            },
+            {
+              "tool": "social_search",
+              "args": {
+                "query": "Sơn Tùng M-TP",
+                "search_type": "Latest",
+                "limit": 5
+              },
+              "result": {
+                "tool": "search_tweets",
+                "query": "Sơn Tùng M-TP",
+                "search_type": "Latest",
+                "items": [
+                  {
+                    "title": "Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP? 👀💙",
+                    "summary": "Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP? 👀💙\nhttps://t.co/hgXVGglZqN",
+                    "url": "https://x.com/Phuonghong1872/status/2061665705905529092",
+                    "source": "@Phuonghong1872",
+                    "date": "Tue Jun 02 04:26:22 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 0,
+                      "views": "3"
+                    }
+                  },
+                  {
+                    "title": "@sontungmtp777 @Tyga Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders” and “hopes to sha",
+                    "summary": "@sontungmtp777 @Tyga Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders” and “hopes to share a message with audiences everywhere to never stop chasing your dreams, no matter how impossible or unconventional they may seem.”\n\n#CMW @sontungmtp777 #SonTungMTP https://t.co/JlaSwDC9Br",
+                    "url": "https://x.com/MTPGlobalUnion/status/2061631324818120865",
+                    "source": "@MTPGlobalUnion",
+                    "date": "Tue Jun 02 02:09:45 +0000 2026",
+                    "metrics": {
+                      "favorites": 4,
+                      "retweets": 1,
+                      "views": "41"
+                    }
+                  },
+                  {
+                    "title": "@sontungmtp777 @Tyga Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.",
+                    "summary": "@sontungmtp777 @Tyga Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.\n\n#CMW #SonTungMTP \n@sontungmtp777 https://t.co/x29DfLW9OG",
+                    "url": "https://x.com/MTPGlobalUnion/status/2061630806150545692",
+                    "source": "@MTPGlobalUnion",
+                    "date": "Tue Jun 02 02:07:42 +0000 2026",
+                    "metrics": {
+                      "favorites": 3,
+                      "retweets": 2,
+                      "views": "37"
+                    }
+                  },
+                  {
+                    "title": "📣@Forbes magazine published an article titled: ",
+                    "summary": "📣@Forbes magazine published an article titled: \nSơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’\n\nThank Forbes magazine for covering @sontungmtp777 and CMW — a product dedicated to introducing,spreading Vietnamese culture and heritage to a global audience. https://t.co/KCXLXHw5r1",
+                    "url": "https://x.com/MTPGlobalUnion/status/2061624717199765862",
+                    "source": "@MTPGlobalUnion",
+                    "date": "Tue Jun 02 01:43:30 +0000 2026",
+                    "metrics": {
+                      "favorites": 11,
+                      "retweets": 2,
+                      "views": "282"
+                    }
+                  },
+                  {
+                    "title": "Mais do que uma colaboração internacional, \"Come My Way\" é uma demonstração do crescimento da música vietnamita no cenár",
+                    "summary": "Mais do que uma colaboração internacional, \"Come My Way\" é uma demonstração do crescimento da música vietnamita no cenário mundial e da influência cada vez maior de Sơn Tùng M-TP como artista global. 🚀👑\n\n📖 Destaque na Forbes. 🎵 Nova era. 🌎 Impacto global. 💙 Orgulho SKY. https://t.co/z7HsXyP56C",
+                    "url": "https://x.com/SonTungBR/status/2061588560461918630",
+                    "source": "@SonTungBR",
+                    "date": "Mon Jun 01 23:19:49 +0000 2026",
+                    "metrics": {
+                      "favorites": 3,
+                      "retweets": 1,
+                      "views": "36"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the latest updates about Sơn Tùng M-TP:\n\n### News Articles\n1. **[Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada](https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html)**\n   - Sơn Tùng M-TP collaborates with American rapper Tyga on a new single titled “Come My Way,” celebrating Vietnamese heritage. The song bridges Sơn Tùng's global expansion and American hip-hop, with Tyga expressing pride in his Vietnamese roots.\n\n2. **[Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes](https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/)**\n   - Similar to the Yahoo article, this piece highlights the collaboration between Sơn Tùng M-TP and Tyga, emphasizing the cultural significance of their partnership.\n\n### Tweets\n1. **[Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP?](https://x.com/Phuonghong1872/status/2061665705905529092)**\n   - A tweet discussing public reactions to the “Come My Way” campaign featuring Sơn Tùng M-TP.\n\n2. **[@MTPGlobalUnion: Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders”](https://x.com/MTPGlobalUnion/status/2061631324818120865)**\n   - A tweet quoting Sơn Tùng M-TP's aspirations to share his music globally.\n\n3. **[@MTPGlobalUnion: Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.](https://x.com/MTPGlobalUnion/status/2061630806150545692)**\n   - A tweet highlighting Sơn Tùng M-TP's role in promoting Vietnamese culture internationally.\n\n4. **[@MTPGlobalUnion: Forbes magazine published an article titled: Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’](https://x.com/MTPGlobalUnion/status/2061624717199765862)**\n   - A tweet thanking Forbes for covering Sơn Tùng M-TP and his cultural contributions.\n\n5. **[@SonTungBR: “Come My Way” é uma demonstração do crescimento da música vietnamita no cenário mundial](https://x.com/SonTungBR/status/2061588560461918630)**\n   - A tweet discussing the impact of Sơn Tùng M-TP's music on the global stage.\n\nIf you need more specific information or further details, feel free to ask!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "ca sĩ Sơn Tùng M-TP",
+            "topic": "news",
+            "timeframe": "week",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "ca sĩ Sơn Tùng M-TP",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada",
+                "url": "https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html",
+                "source": "ca.news.yahoo.com",
+                "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. “Growing up half-Vietnamese, I’ve always had pride in that identity, and being able to celebrate it through music on a global record like this just felt right. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles.",
+                "score": 0.9953181
+              },
+              {
+                "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes",
+                "url": "https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/",
+                "source": "forbes.com",
+                "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles. Sơn Tùng M-TP x TYGA’s “Come My Way” is out now on all streaming platforms.",
+                "score": 0.99509466
+              },
+              {
+                "title": "BTS Wins Artist of the Year at American Music Awards: Complete Winners List - Variety Australia",
+                "url": "https://au.variety.com/2026/music/global/american-music-awards-winners-list-bts-katseye-sombr-golden-36967/",
+                "source": "au.variety.com",
+                "summary": "# BTS Wins Artist of the Year at American Music Awards, as Katseye, Sombr, ‘Golden’ Also Score Top Honors: Complete Winners List. Despite missing out in the new artist category, Sombr did not go home empty-handed, following his performance on the show with trips to the podium to pick up awards for Best Rock/Alternative Song, for “Back to Friends,” and Best Rock/Alternative Album, for “I Barely Know Her.”. The fervor for “KPop Demon Hunters” did not go unrewarded, as “Golden” and its singers EJAE, Audrey Nuna and Rei Ami picked up Song of the Year. So Album of the Year was one of the categories not given out on-air; it went to Sabrina Carpenter for “Man’s Best Friend,” one of three awards in all that were revealed as going to her after the broadcast was over. Artist of the Year: BTS. Song of the Year: The Singing Voices of HUNTR/X: EJAE, Audrey Nuna, Rei Ami – “Golden”.",
+                "score": 0.0060503976
+              },
+              {
+                "title": "Jesse McCartney to perform at senior prom in Bucks County - CBS News",
+                "url": "https://www.cbsnews.com/philadelphia/video/jesse-mccartney-to-perform-at-senior-prom-in-bucks-county/",
+                "source": "cbsnews.com",
+                "summary": "* Send Us a News Tip. # Jesse McCartney to perform at senior prom in Bucks County. 2000s pop singer Jesse McCartney will perform at the senior prom at Pennsbury High School in Fairless Hills, Bucks County this weekend, continuing a tradition of a major headliner taking the stage at what is called \"The Best Prom in America.\".",
+                "score": 0.00050530455
+              },
+              {
+                "title": "Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It' - AOL.com",
+                "url": "https://www.aol.com/articles/megan-moroney-performs-wonder-her-150704042.html",
+                "source": "aol.com",
+                "summary": "# Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It'. * Megan Moroney performed at her best friend Natalie King's wedding. * Moroney released \"Wonder\" in 2021. The country star performed the first song she ever released at her BFF Natalie King's wedding to Alex Harp on Saturday, May 23, in Turks and Caicos. Moroney, 28, who was designated the influencer's maid of honor, shared footage of the performance of her song \"Wonder\" on TikTok. During her set, where she sported a yellow chiffon dress with her hair in an updo, the \"6 Months Later\" artist told guests that the song was originally written for King, 28, years before. \"I've played this song a lot, but I think that this might be the most meaningful time that I play it,\" said Moroney. \"For those of you who don't know, the first song I ever released was a song written for Natalie.",
+                "score": 0.00048976566
+              }
+            ]
+          }
+        },
+        {
+          "tool": "social_search",
+          "args": {
+            "query": "Sơn Tùng M-TP",
+            "search_type": "Latest",
+            "limit": 5
+          },
+          "result": {
+            "tool": "search_tweets",
+            "query": "Sơn Tùng M-TP",
+            "search_type": "Latest",
+            "items": [
+              {
+                "title": "Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP? 👀💙",
+                "summary": "Netizen đang nói gì về chiến dịch “Come My Way” ECOVACS x Sơn Tùng M-TP? 👀💙\nhttps://t.co/hgXVGglZqN",
+                "url": "https://x.com/Phuonghong1872/status/2061665705905529092",
+                "source": "@Phuonghong1872",
+                "date": "Tue Jun 02 04:26:22 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 0,
+                  "views": "3"
+                }
+              },
+              {
+                "title": "@sontungmtp777 @Tyga Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders” and “hopes to sha",
+                "summary": "@sontungmtp777 @Tyga Sơn Tùng M-TP states that “he wants to continue to push his music beyond borders” and “hopes to share a message with audiences everywhere to never stop chasing your dreams, no matter how impossible or unconventional they may seem.”\n\n#CMW @sontungmtp777 #SonTungMTP https://t.co/JlaSwDC9Br",
+                "url": "https://x.com/MTPGlobalUnion/status/2061631324818120865",
+                "source": "@MTPGlobalUnion",
+                "date": "Tue Jun 02 02:09:45 +0000 2026",
+                "metrics": {
+                  "favorites": 4,
+                  "retweets": 1,
+                  "views": "41"
+                }
+              },
+              {
+                "title": "@sontungmtp777 @Tyga Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.",
+                "summary": "@sontungmtp777 @Tyga Now, Sơn Tùng M-TP is bringing Vietnamese culture to Western media.\n\n#CMW #SonTungMTP \n@sontungmtp777 https://t.co/x29DfLW9OG",
+                "url": "https://x.com/MTPGlobalUnion/status/2061630806150545692",
+                "source": "@MTPGlobalUnion",
+                "date": "Tue Jun 02 02:07:42 +0000 2026",
+                "metrics": {
+                  "favorites": 3,
+                  "retweets": 2,
+                  "views": "37"
+                }
+              },
+              {
+                "title": "📣@Forbes magazine published an article titled: ",
+                "summary": "📣@Forbes magazine published an article titled: \nSơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’\n\nThank Forbes magazine for covering @sontungmtp777 and CMW — a product dedicated to introducing,spreading Vietnamese culture and heritage to a global audience. https://t.co/KCXLXHw5r1",
+                "url": "https://x.com/MTPGlobalUnion/status/2061624717199765862",
+                "source": "@MTPGlobalUnion",
+                "date": "Tue Jun 02 01:43:30 +0000 2026",
+                "metrics": {
+                  "favorites": 11,
+                  "retweets": 2,
+                  "views": "282"
+                }
+              },
+              {
+                "title": "Mais do que uma colaboração internacional, \"Come My Way\" é uma demonstração do crescimento da música vietnamita no cenár",
+                "summary": "Mais do que uma colaboração internacional, \"Come My Way\" é uma demonstração do crescimento da música vietnamita no cenário mundial e da influência cada vez maior de Sơn Tùng M-TP como artista global. 🚀👑\n\n📖 Destaque na Forbes. 🎵 Nova era. 🌎 Impacto global. 💙 Orgulho SKY. https://t.co/z7HsXyP56C",
+                "url": "https://x.com/SonTungBR/status/2061588560461918630",
+                "source": "@SonTungBR",
+                "date": "Mon Jun 01 23:19:49 +0000 2026",
+                "metrics": {
+                  "favorites": 3,
+                  "retweets": 1,
+                  "views": "36"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:13:29"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-06-02T15:14:15",
+      "user": "không cần tìm trên twister nữa mà chỉ cần tìm websearch thôi",
+      "status": "answered",
+      "assistant_text": "Here are the latest updates and information about Sơn Tùng M-TP:\n\n### Recent News\n1. **Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’**  \n   - Sơn Tùng M-TP has collaborated with American rapper Tyga on a new single titled “Come My Way.” The song, released on all streaming platforms, celebrates Vietnamese heritage and showcases a blend of cultures. Tyga expressed pride in his Vietnamese roots, making the collaboration feel natural and meaningful.  \n   [Read more on Yahoo News](https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html)\n\n2. **Sơn Tùng M-TP x Tyga \"Come My Way\" Single Stream**  \n   - The collaboration between Sơn Tùng M-TP and Tyga is described as a convergence of cultures, emphasizing their deep connection beyond just the music. Sơn Tùng highlighted that the project is a significant opportunity for both artists to reconnect with their roots.  \n   [Read more on Hypebeast](https://hypebeast.com/2026/6/son-tung-m-tp-tyga-come-my-way-single-music-video-stream-interview)\n\n3. **Sơn Tùng M-TP đưa văn hóa dân gian Việt vào MV Come My Way**  \n   - In the music video for \"Come My Way,\" Sơn Tùng M-TP incorporates elements of Vietnamese culture, including a representation of the Chim Lạc, an ancient bird of Vietnam, set against the backdrop of Downtown Los Angeles.  \n   [Read more on VNExpress](https://vnexpress.net/son-tung-m-tp-dua-van-hoa-dan-gian-viet-vao-mv-tieng-anh-5079432.html)\n\n4. **Come My Way của Sơn Tùng MTP trở thành lời mời thế giới đến với Việt Nam**  \n   - The song \"Come My Way\" is seen as an invitation for the world to engage with Vietnamese culture, highlighting the importance of cultural representation in mainstream media.  \n   [Read more on VietnamNet](https://vietnamnet.vn/come-my-way-cua-son-tung-mtp-tro-thanh-loi-moi-the-gioi-den-voi-viet-nam-2520878.html)\n\n### General Information\n- **Sơn Tùng M-TP on Apple Music**  \n   - You can find his latest releases, top songs, and albums on his [Apple Music profile](https://music.apple.com/us/artist/s%C6%A1n-t%C3%B9ng-m-tp/705007874).\n\nIf you need more specific details or further information, feel free to ask!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 5
+              }
+            },
+            {
+              "name": "lookup",
+              "args": {
+                "query": "Sơn Tùng M-TP",
+                "topic": "general",
+                "timeframe": "week",
+                "max_results": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "ca sĩ Sơn Tùng M-TP",
+                "topic": "news",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada",
+                    "url": "https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html",
+                    "source": "ca.news.yahoo.com",
+                    "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. “Growing up half-Vietnamese, I’ve always had pride in that identity, and being able to celebrate it through music on a global record like this just felt right. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles.",
+                    "score": 0.9953181
+                  },
+                  {
+                    "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes",
+                    "url": "https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/",
+                    "source": "forbes.com",
+                    "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles. Sơn Tùng M-TP x TYGA’s “Come My Way” is out now on all streaming platforms.",
+                    "score": 0.99509466
+                  },
+                  {
+                    "title": "BTS Wins Artist of the Year at American Music Awards: Complete Winners List - Variety Australia",
+                    "url": "https://au.variety.com/2026/music/global/american-music-awards-winners-list-bts-katseye-sombr-golden-36967/",
+                    "source": "au.variety.com",
+                    "summary": "# BTS Wins Artist of the Year at American Music Awards, as Katseye, Sombr, ‘Golden’ Also Score Top Honors: Complete Winners List. Despite missing out in the new artist category, Sombr did not go home empty-handed, following his performance on the show with trips to the podium to pick up awards for Best Rock/Alternative Song, for “Back to Friends,” and Best Rock/Alternative Album, for “I Barely Know Her.”. The fervor for “KPop Demon Hunters” did not go unrewarded, as “Golden” and its singers EJAE, Audrey Nuna and Rei Ami picked up Song of the Year. So Album of the Year was one of the categories not given out on-air; it went to Sabrina Carpenter for “Man’s Best Friend,” one of three awards in all that were revealed as going to her after the broadcast was over. Artist of the Year: BTS. Song of the Year: The Singing Voices of HUNTR/X: EJAE, Audrey Nuna, Rei Ami – “Golden”.",
+                    "score": 0.0060503976
+                  },
+                  {
+                    "title": "Jesse McCartney to perform at senior prom in Bucks County - CBS News",
+                    "url": "https://www.cbsnews.com/philadelphia/video/jesse-mccartney-to-perform-at-senior-prom-in-bucks-county/",
+                    "source": "cbsnews.com",
+                    "summary": "* Send Us a News Tip. # Jesse McCartney to perform at senior prom in Bucks County. 2000s pop singer Jesse McCartney will perform at the senior prom at Pennsbury High School in Fairless Hills, Bucks County this weekend, continuing a tradition of a major headliner taking the stage at what is called \"The Best Prom in America.\".",
+                    "score": 0.00050530455
+                  },
+                  {
+                    "title": "Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It' - AOL.com",
+                    "url": "https://www.aol.com/articles/megan-moroney-performs-wonder-her-150704042.html",
+                    "source": "aol.com",
+                    "summary": "# Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It'. * Megan Moroney performed at her best friend Natalie King's wedding. * Moroney released \"Wonder\" in 2021. The country star performed the first song she ever released at her BFF Natalie King's wedding to Alex Harp on Saturday, May 23, in Turks and Caicos. Moroney, 28, who was designated the influencer's maid of honor, shared footage of the performance of her song \"Wonder\" on TikTok. During her set, where she sported a yellow chiffon dress with her hair in an updo, the \"6 Months Later\" artist told guests that the song was originally written for King, 28, years before. \"I've played this song a lot, but I think that this might be the most meaningful time that I play it,\" said Moroney. \"For those of you who don't know, the first song I ever released was a song written for Natalie.",
+                    "score": 0.00048976566
+                  }
+                ]
+              }
+            },
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "Sơn Tùng M-TP",
+                "topic": "general",
+                "timeframe": "week",
+                "max_results": 5
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "Sơn Tùng M-TP",
+                "topic": "general",
+                "timeframe": "week",
+                "items": [
+                  {
+                    "title": "‎Sơn Tùng M-TP - Apple Music",
+                    "url": "https://music.apple.com/us/artist/s%C6%A1n-t%C3%B9ng-m-tp/705007874",
+                    "source": "music.apple.com",
+                    "summary": "# Sơn Tùng M-TP. ## Latest Release. ## Top Songs. ## Albums. Sky Tour (Original Motion Picture Soundtrack). ## Music Videos. ## Artist Playlists. Sơn Tùng M-TP: Love Songs. Heart-stirring touches of alt-pop and R&B from a modern romantic. Sơn Tùng M-TP: Sing. Sơn Tùng M-TP: Influences. A sound shaped by Western pop and traditional Vietnamese music. ## Singles & EPs. Đừng Làm Trái Tim Anh Đau - Single. Có Chắc Yêu Là Đây (Remix) - Single. Nơi Này Có Anh (Remix) - Single. Muộn Rồi Mà Sao Còn (Remix) - Single. ## Similar Artists. ### SOOBIN. ### Erik. ### JustaTee. ### AMEE. ### HIEUTHUHAI. ### RPT MCK. ### Rhymastic. ### Da LAB. ## Africa, Middle East, and India. ## Asia Pacific. ## Latin America and the Caribbean. ## The United States and Canada. Copyright © 2026 Apple Inc. All rights reserved.",
+                    "score": 0.69795954
+                  },
+                  {
+                    "title": "Sơn Tùng M-TP x Tyga \"Come My Way\" Single Stream | Hypebeast",
+                    "url": "https://hypebeast.com/2026/6/son-tung-m-tp-tyga-come-my-way-single-music-video-stream-interview",
+                    "source": "hypebeast.com",
+                    "summary": "Sign up for a Hype account, a new unified account accessing unique features and benefits across all Hypebeast websites. Stay ahead of the curve and never miss out on what's fresh, exciting, and essential. # Sơn Tùng M-TP and Tyga Are Tapping Into Something Deeper Than a Collab With \"Come My Way\". Sơn Tùng M-TP‘s new single “Come My Way” featuring Tyga is a constructed convergence of cultures, of timelines, and of two artists whose connection runs deeper than the record itself. The first thing to understand about “Come My Way” is that it was never a cold pitch. Sơn Tùng describes the collaboration as the product of a long-standing relationship with Tyga, one that had produced multiple near-misses before finally locking into place. “It’s more than just a song,” Sơn Tùng explains. “It’s a meaningful opportunity for both of us to reconnect with our roots.” That shared lineage, he argues, is precisely why the creative chemistry felt so immediate and unforced.",
+                    "score": 0.68064564
+                  },
+                  {
+                    "title": "Sơn Tùng M-TP đưa văn hóa dân gian Việt vào MV Come My Way",
+                    "url": "https://vnexpress.net/son-tung-m-tp-dua-van-hoa-dan-gian-viet-vao-mv-tieng-anh-5079432.html",
+                    "source": "vnexpress.net",
+                    "summary": "# Sơn Tùng M-TP đưa văn hóa dn gian vào MV 'Come My Way'. Ca sĩ Sơn Tùng M-TP cưỡi mô hình chim Lạc giữa đường phố Los Angeles (Mỹ), tái hiện hình ảnh đua bò An Giang, trong MV \"Come My Way\". Ở đầu video, hình ảnh chim Lạc xuất hiện giữa bối cảnh trung tm Downtown Los Angeles, đại diện êkíp cho biết phn cảnh mang ngụ ý về sự giao thoa văn hóa. Trích MV \"Come My Way\" của Sơn Tùng M-TP. Một trong những phn đoạn gy chú ý là bối cảnh giữa danh thắng Tràng An. Dựng một sn khấu nhỏ, Sơn Tùng M-TP cùng nhóm nhảy đeo mặt nạ, thể hiện vũ đạo trên nền nhạc sôi động. Khách mời dự án - rapper Mỹ Tyga - xuất hiện bên Sơn Tùng M-TP ở một phn cảnh giữa đô thị Los Angeles. Sơn Tùng M-TP trong phn cảnh đầu MV.",
+                    "score": 0.61168414
+                  },
+                  {
+                    "title": "Instagram",
+                    "url": "https://www.instagram.com/reel/DY6DXdDyj_Y",
+                    "source": "instagram.com",
+                    "summary": "Thank you so much for the support ♥️\". \" name=\"description\"> (link in my bio). Thank you so much for the support ♥️\"\" property=\"og:title\"> (link in my bio). Sign up for Instagram to stay in the loop. Sơn Tùng M-TP, Tyga•Come My Way. Son Tung M‑TP x @tyga. “Come My Way” is officially out now 🔥. Stream it now on all digital platforms and show us your love —> (link in my bio). m.v__cong's profile picture. _neyuq.noir's profile picture. @sontungmtp  new song ft me “ Come My way” out now🔥🇻🇳. Trust me, the whole entire world needs to hear this @sontungmtp & @tyga crossover, “Come My Way” – and they sent me some exclusive pics to share the news 🗞️. Còn có 30 phút nữa thôiiiii … Tôi đang trong link công chiếu rồi và cảm xúc thật hỗn độnnnnnnnn 💪🏼🙏🏻❤️‍🔥. Còn 1 tiếng nữa thôiiii … Ai đã click vào phần bio rồi thì giơ cái tay tôi xem nàoooooo 💪🏼🙏🏻❤️‍🔥.",
+                    "score": 0.5832277
+                  },
+                  {
+                    "title": "Come My Way của Sơn Tùng MTP trở thành lời mời thế giới đến với Việt Nam",
+                    "url": "https://vietnamnet.vn/come-my-way-cua-son-tung-mtp-tro-thanh-loi-moi-the-gioi-den-voi-viet-nam-2520878.html",
+                    "source": "vietnamnet.vn",
+                    "summary": "* Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của báo VietNamNet. Điều làm tôi quan tm nhất ở *Come My Way* không chỉ là m nhạc, lượt xem hay sự hợp tác với một nghệ sĩ quốc tế mà là cách Sơn Tùng M-TP đặt văn hóa Việt Nam vào trung tm của một sản phẩm đại chúng. Khi một MV có thể làm cho công chúng trẻ quan tm đến tranh Việt, đến di sản Việt, đến không gian văn hóa Việt thì đó không chỉ là thành công của một nghệ sĩ mà còn là tín hiệu tích cực cho việc kết nối văn hóa bác học với văn hóa đại chúng.",
+                    "score": 0.5806618
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Here are the latest updates and information about Sơn Tùng M-TP:\n\n### Recent News\n1. **Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’**  \n   - Sơn Tùng M-TP has collaborated with American rapper Tyga on a new single titled “Come My Way.” The song, released on all streaming platforms, celebrates Vietnamese heritage and showcases a blend of cultures. Tyga expressed pride in his Vietnamese roots, making the collaboration feel natural and meaningful.  \n   [Read more on Yahoo News](https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html)\n\n2. **Sơn Tùng M-TP x Tyga \"Come My Way\" Single Stream**  \n   - The collaboration between Sơn Tùng M-TP and Tyga is described as a convergence of cultures, emphasizing their deep connection beyond just the music. Sơn Tùng highlighted that the project is a significant opportunity for both artists to reconnect with their roots.  \n   [Read more on Hypebeast](https://hypebeast.com/2026/6/son-tung-m-tp-tyga-come-my-way-single-music-video-stream-interview)\n\n3. **Sơn Tùng M-TP đưa văn hóa dân gian Việt vào MV Come My Way**  \n   - In the music video for \"Come My Way,\" Sơn Tùng M-TP incorporates elements of Vietnamese culture, including a representation of the Chim Lạc, an ancient bird of Vietnam, set against the backdrop of Downtown Los Angeles.  \n   [Read more on VNExpress](https://vnexpress.net/son-tung-m-tp-dua-van-hoa-dan-gian-viet-vao-mv-tieng-anh-5079432.html)\n\n4. **Come My Way của Sơn Tùng MTP trở thành lời mời thế giới đến với Việt Nam**  \n   - The song \"Come My Way\" is seen as an invitation for the world to engage with Vietnamese culture, highlighting the importance of cultural representation in mainstream media.  \n   [Read more on VietnamNet](https://vietnamnet.vn/come-my-way-cua-son-tung-mtp-tro-thanh-loi-moi-the-gioi-den-voi-viet-nam-2520878.html)\n\n### General Information\n- **Sơn Tùng M-TP on Apple Music**  \n   - You can find his latest releases, top songs, and albums on his [Apple Music profile](https://music.apple.com/us/artist/s%C6%A1n-t%C3%B9ng-m-tp/705007874).\n\nIf you need more specific details or further information, feel free to ask!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "ca sĩ Sơn Tùng M-TP",
+            "topic": "news",
+            "timeframe": "week",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "ca sĩ Sơn Tùng M-TP",
+            "topic": "news",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Yahoo News Canada",
+                "url": "https://ca.news.yahoo.com/n-t-ng-m-tp-075022394.html",
+                "source": "ca.news.yahoo.com",
+                "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. “Growing up half-Vietnamese, I’ve always had pride in that identity, and being able to celebrate it through music on a global record like this just felt right. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles.",
+                "score": 0.9953181
+              },
+              {
+                "title": "Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’ - Forbes",
+                "url": "https://www.forbes.com/sites/laurasirikul/2026/06/01/sn-tng-m-tp-and-tyga-celebrate-vietnamese-heritage-with-come-my-way/",
+                "source": "forbes.com",
+                "summary": "# Sơn Tùng M-TP And Tyga Celebrate Vietnamese Heritage With ‘Come My Way’. Vietnamese superstar, Sơn Tùng M-TP, is crossing over with Western artists, teaming up with American rap artist Tyga on their new single, “Come My Way,” released this past weekend on all streaming platforms. The collaboration feels like a perfect fit, as it bridges Sơn Tùng M-TP’s global expansion and American hip-hop, especially with Tyga’s mixed Vietnamese heritage, giving the song a deeper connection to the music and culture. “Working with Sơn Tùng M-TP on this record felt natural because it gave me a chance to reconnect with a side of my heritage that’s always been part of me,” says Tyga. Sơn Tùng M-TP is standing on a bronze Chim Lạc, an ancient bird of Vietnam, as it floats through the streets of Downtown Los Angeles. Sơn Tùng M-TP x TYGA’s “Come My Way” is out now on all streaming platforms.",
+                "score": 0.99509466
+              },
+              {
+                "title": "BTS Wins Artist of the Year at American Music Awards: Complete Winners List - Variety Australia",
+                "url": "https://au.variety.com/2026/music/global/american-music-awards-winners-list-bts-katseye-sombr-golden-36967/",
+                "source": "au.variety.com",
+                "summary": "# BTS Wins Artist of the Year at American Music Awards, as Katseye, Sombr, ‘Golden’ Also Score Top Honors: Complete Winners List. Despite missing out in the new artist category, Sombr did not go home empty-handed, following his performance on the show with trips to the podium to pick up awards for Best Rock/Alternative Song, for “Back to Friends,” and Best Rock/Alternative Album, for “I Barely Know Her.”. The fervor for “KPop Demon Hunters” did not go unrewarded, as “Golden” and its singers EJAE, Audrey Nuna and Rei Ami picked up Song of the Year. So Album of the Year was one of the categories not given out on-air; it went to Sabrina Carpenter for “Man’s Best Friend,” one of three awards in all that were revealed as going to her after the broadcast was over. Artist of the Year: BTS. Song of the Year: The Singing Voices of HUNTR/X: EJAE, Audrey Nuna, Rei Ami – “Golden”.",
+                "score": 0.0060503976
+              },
+              {
+                "title": "Jesse McCartney to perform at senior prom in Bucks County - CBS News",
+                "url": "https://www.cbsnews.com/philadelphia/video/jesse-mccartney-to-perform-at-senior-prom-in-bucks-county/",
+                "source": "cbsnews.com",
+                "summary": "* Send Us a News Tip. # Jesse McCartney to perform at senior prom in Bucks County. 2000s pop singer Jesse McCartney will perform at the senior prom at Pennsbury High School in Fairless Hills, Bucks County this weekend, continuing a tradition of a major headliner taking the stage at what is called \"The Best Prom in America.\".",
+                "score": 0.00050530455
+              },
+              {
+                "title": "Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It' - AOL.com",
+                "url": "https://www.aol.com/articles/megan-moroney-performs-wonder-her-150704042.html",
+                "source": "aol.com",
+                "summary": "# Megan Moroney Performs 'Wonder' at Her Best Friend Natalie's Wedding: 'This Might Be the Most Meaningful Time I Play It'. * Megan Moroney performed at her best friend Natalie King's wedding. * Moroney released \"Wonder\" in 2021. The country star performed the first song she ever released at her BFF Natalie King's wedding to Alex Harp on Saturday, May 23, in Turks and Caicos. Moroney, 28, who was designated the influencer's maid of honor, shared footage of the performance of her song \"Wonder\" on TikTok. During her set, where she sported a yellow chiffon dress with her hair in an updo, the \"6 Months Later\" artist told guests that the song was originally written for King, 28, years before. \"I've played this song a lot, but I think that this might be the most meaningful time that I play it,\" said Moroney. \"For those of you who don't know, the first song I ever released was a song written for Natalie.",
+                "score": 0.00048976566
+              }
+            ]
+          }
+        },
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "Sơn Tùng M-TP",
+            "topic": "general",
+            "timeframe": "week",
+            "max_results": 5
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "Sơn Tùng M-TP",
+            "topic": "general",
+            "timeframe": "week",
+            "items": [
+              {
+                "title": "‎Sơn Tùng M-TP - Apple Music",
+                "url": "https://music.apple.com/us/artist/s%C6%A1n-t%C3%B9ng-m-tp/705007874",
+                "source": "music.apple.com",
+                "summary": "# Sơn Tùng M-TP. ## Latest Release. ## Top Songs. ## Albums. Sky Tour (Original Motion Picture Soundtrack). ## Music Videos. ## Artist Playlists. Sơn Tùng M-TP: Love Songs. Heart-stirring touches of alt-pop and R&B from a modern romantic. Sơn Tùng M-TP: Sing. Sơn Tùng M-TP: Influences. A sound shaped by Western pop and traditional Vietnamese music. ## Singles & EPs. Đừng Làm Trái Tim Anh Đau - Single. Có Chắc Yêu Là Đây (Remix) - Single. Nơi Này Có Anh (Remix) - Single. Muộn Rồi Mà Sao Còn (Remix) - Single. ## Similar Artists. ### SOOBIN. ### Erik. ### JustaTee. ### AMEE. ### HIEUTHUHAI. ### RPT MCK. ### Rhymastic. ### Da LAB. ## Africa, Middle East, and India. ## Asia Pacific. ## Latin America and the Caribbean. ## The United States and Canada. Copyright © 2026 Apple Inc. All rights reserved.",
+                "score": 0.69795954
+              },
+              {
+                "title": "Sơn Tùng M-TP x Tyga \"Come My Way\" Single Stream | Hypebeast",
+                "url": "https://hypebeast.com/2026/6/son-tung-m-tp-tyga-come-my-way-single-music-video-stream-interview",
+                "source": "hypebeast.com",
+                "summary": "Sign up for a Hype account, a new unified account accessing unique features and benefits across all Hypebeast websites. Stay ahead of the curve and never miss out on what's fresh, exciting, and essential. # Sơn Tùng M-TP and Tyga Are Tapping Into Something Deeper Than a Collab With \"Come My Way\". Sơn Tùng M-TP‘s new single “Come My Way” featuring Tyga is a constructed convergence of cultures, of timelines, and of two artists whose connection runs deeper than the record itself. The first thing to understand about “Come My Way” is that it was never a cold pitch. Sơn Tùng describes the collaboration as the product of a long-standing relationship with Tyga, one that had produced multiple near-misses before finally locking into place. “It’s more than just a song,” Sơn Tùng explains. “It’s a meaningful opportunity for both of us to reconnect with our roots.” That shared lineage, he argues, is precisely why the creative chemistry felt so immediate and unforced.",
+                "score": 0.68064564
+              },
+              {
+                "title": "Sơn Tùng M-TP đưa văn hóa dân gian Việt vào MV Come My Way",
+                "url": "https://vnexpress.net/son-tung-m-tp-dua-van-hoa-dan-gian-viet-vao-mv-tieng-anh-5079432.html",
+                "source": "vnexpress.net",
+                "summary": "# Sơn Tùng M-TP đưa văn hóa dn gian vào MV 'Come My Way'. Ca sĩ Sơn Tùng M-TP cưỡi mô hình chim Lạc giữa đường phố Los Angeles (Mỹ), tái hiện hình ảnh đua bò An Giang, trong MV \"Come My Way\". Ở đầu video, hình ảnh chim Lạc xuất hiện giữa bối cảnh trung tm Downtown Los Angeles, đại diện êkíp cho biết phn cảnh mang ngụ ý về sự giao thoa văn hóa. Trích MV \"Come My Way\" của Sơn Tùng M-TP. Một trong những phn đoạn gy chú ý là bối cảnh giữa danh thắng Tràng An. Dựng một sn khấu nhỏ, Sơn Tùng M-TP cùng nhóm nhảy đeo mặt nạ, thể hiện vũ đạo trên nền nhạc sôi động. Khách mời dự án - rapper Mỹ Tyga - xuất hiện bên Sơn Tùng M-TP ở một phn cảnh giữa đô thị Los Angeles. Sơn Tùng M-TP trong phn cảnh đầu MV.",
+                "score": 0.61168414
+              },
+              {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/reel/DY6DXdDyj_Y",
+                "source": "instagram.com",
+                "summary": "Thank you so much for the support ♥️\". \" name=\"description\"> (link in my bio). Thank you so much for the support ♥️\"\" property=\"og:title\"> (link in my bio). Sign up for Instagram to stay in the loop. Sơn Tùng M-TP, Tyga•Come My Way. Son Tung M‑TP x @tyga. “Come My Way” is officially out now 🔥. Stream it now on all digital platforms and show us your love —> (link in my bio). m.v__cong's profile picture. _neyuq.noir's profile picture. @sontungmtp  new song ft me “ Come My way” out now🔥🇻🇳. Trust me, the whole entire world needs to hear this @sontungmtp & @tyga crossover, “Come My Way” – and they sent me some exclusive pics to share the news 🗞️. Còn có 30 phút nữa thôiiiii … Tôi đang trong link công chiếu rồi và cảm xúc thật hỗn độnnnnnnnn 💪🏼🙏🏻❤️‍🔥. Còn 1 tiếng nữa thôiiii … Ai đã click vào phần bio rồi thì giơ cái tay tôi xem nàoooooo 💪🏼🙏🏻❤️‍🔥.",
+                "score": 0.5832277
+              },
+              {
+                "title": "Come My Way của Sơn Tùng MTP trở thành lời mời thế giới đến với Việt Nam",
+                "url": "https://vietnamnet.vn/come-my-way-cua-son-tung-mtp-tro-thanh-loi-moi-the-gioi-den-voi-viet-nam-2520878.html",
+                "source": "vietnamnet.vn",
+                "summary": "* Chỉ được phát hành lại thông tin từ website này khi có sự đồng ý bằng văn bản của báo VietNamNet. Điều làm tôi quan tm nhất ở *Come My Way* không chỉ là m nhạc, lượt xem hay sự hợp tác với một nghệ sĩ quốc tế mà là cách Sơn Tùng M-TP đặt văn hóa Việt Nam vào trung tm của một sản phẩm đại chúng. Khi một MV có thể làm cho công chúng trẻ quan tm đến tranh Việt, đến di sản Việt, đến không gian văn hóa Việt thì đó không chỉ là thành công của một nghệ sĩ mà còn là tín hiệu tích cực cho việc kết nối văn hóa bác học với văn hóa đại chúng.",
+                "score": 0.5806618
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:14:37"
+    }
+  ]
+}
