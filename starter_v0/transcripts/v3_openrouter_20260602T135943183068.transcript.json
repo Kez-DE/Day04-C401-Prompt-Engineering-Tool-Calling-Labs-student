@@ -1,0 +1,563 @@
+{
+  "transcript_id": "v3_openrouter_20260602T135943183068",
+  "version": "v3",
+  "artifact_version": "v3+p1fdd0591f38a+t6ae58c1c3383",
+  "prompt_hash": "1fdd0591f38a17965cb39f87231a58a887306a81bb415afecfe2db4baabb26a0",
+  "tools_hash": "6ae58c1c3383f6c7b14f2018dcdcf302dd03dfa627e8eb3885b44c0ffaeb89fd",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "D:\\Personal\\University\\VinUni\\Lab\\Day 4\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "D:\\Personal\\University\\VinUni\\Lab\\Day 4\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-02T13:59:43",
+  "updated_at": "2026-06-02T14:01:08",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-02T13:59:43",
+      "user": "Tin AI hom nay co gi noi bat?",
+      "status": "answered",
+      "assistant_text": "Dưới đây là một số tin tức nổi bật về AI trong hôm nay:\n\n1. **AI ad campaigns slam Trahan** - Một nhóm an toàn AI đã triển khai một chiến dịch quảng cáo lớn nhằm chỉ trích đại diện Lori Trahan (D-Massachusetts), cho rằng bà đang \"đứng về phía\" các ông lớn AI trong các nỗ lực lập pháp của mình. Nvidia cũng đã ra mắt một mô hình mô phỏng mới cho robot. [Đọc thêm](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/) từ Washington Post.\n\n2. **OpenAI đối mặt với kiện tụng** - OpenAI đang trở thành tâm điểm của các vụ kiện trong ngành công nghệ. [Chi tiết tại đây](https://abovethelaw.com/2026/06/openai-is-latest-tech-company-in-the-litigation-hot-seat/2/) từ Above the Law.\n\n3. **Sam Altman nói về việc tuyển dụng** - CEO của OpenAI, Sam Altman, cho biết các công ty áp dụng AI nhiều nhất cũng là những công ty đang tuyển dụng nhiều nhất. Ông chỉ ra rằng những công ty công khai trích dẫn AI như lý do cho việc sa thải thường là những công ty ít áp dụng AI nhất. [Xem thêm](https://letsdatascience.com/news/sam-altman-says-ai-adopting-companies-are-hiring-132adf62).\n\n4. **Dự báo chi tiêu quảng cáo kỹ thuật số tại Vương quốc Anh** - AI được dự đoán sẽ thúc đẩy 18 tỷ bảng Anh trong chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh vào năm 2030, chiếm một phần ba tổng chi tiêu quảng cáo. [Tìm hiểu thêm](https://www.marketingweek.com/iab-uk-ai-ad-spend/) từ Marketing Week.\n\n5. **DuckDuckGo ra mắt tiện ích tìm kiếm không AI** - DuckDuckGo đã chứng kiến lưu lượng truy cập đến trang tìm kiếm không AI của họ tăng gấp ba lần sau khi Google cập nhật tìm kiếm của mình theo hướng AI. Họ đã ra mắt các tiện ích mở rộng trình duyệt mới cho phép người dùng thiết lập trang tìm kiếm không AI làm mặc định. [Đọc thêm](https://www.tweaktown.com/news/111963/duckduckgo-launches-no-ai-search-extensions-after-users-reject-googles-ai-first-search/index.html) từ TweakTown.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "lookup",
+              "args": {
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day"
+              },
+              "result": {
+                "tool": "web_search",
+                "query": "AI",
+                "topic": "news",
+                "timeframe": "day",
+                "items": [
+                  {
+                    "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                    "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                    "source": "washingtonpost.com",
+                    "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                    "score": 0.8749346
+                  },
+                  {
+                    "title": "OpenAI Is Latest Tech Company In The Litigation Hot Seat - Page 2 of 2 - Above the Law",
+                    "url": "https://abovethelaw.com/2026/06/openai-is-latest-tech-company-in-the-litigation-hot-seat/2/",
+                    "source": "abovethelaw.com",
+                    "summary": "# OpenAI Is Latest Tech Company In The Litigation Hot Seat - Page 2 of 2 - Above the Law. Open navigationAbove the LawToggle Search. # OpenAI Is Latest Tech Company In The Litigation Hot Seat. ## More from Above the Law. ## From the Above the Law Network. Image 6: AI Artificial Intelligence (AI) Eve Legal Legal Tech Sponsored Content Technology. Image 7: Legal and operational leaders are gathering May 6–7 in Fort Lauderdale to confront the questions the industry hasn't answered—with a keynote from Amanda Knox setting the tone. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work.",
+                    "score": 0.86339164
+                  },
+                  {
+                    "title": "Sam Altman Says AI-Adopting Companies Are Hiring - Let's Data Science",
+                    "url": "https://letsdatascience.com/news/sam-altman-says-ai-adopting-companies-are-hiring-132adf62",
+                    "source": "letsdatascience.com",
+                    "summary": "Business Insider reports that OpenAI CEO Sam Altman told CNBC on June 1, 2026, that \"the companies that I know that have adopted AI the most are also the ones hiring the most.\" Business Insider quotes Altman saying companies that publicly cite AI as a reason for layoffs tend to be adopting AI the least, and that AI can be a \"convenient way\" to explain layoffs. Business Insider reports that OpenAI CEO **Sam Altman** told CNBC on June 1, 2026, \"the companies that I know that have adopted AI the most are also the ones hiring the most.\" Business Insider quotes Altman as saying that companies publicly citing AI as a reason for layoffs \"are the ones adopting AI the least,\" and that AI can be a \"convenient way\" for companies to explain layoffs. Business Insider also lists recent layoffs at several tech companies and cites a March Pew Research Center poll that found elevated public concern about AI.",
+                    "score": 0.81286734
+                  },
+                  {
+                    "title": "AI expected to drive £18bn of UK digital ad spend by 2030 - Marketing Week",
+                    "url": "https://www.marketingweek.com/iab-uk-ai-ad-spend/",
+                    "source": "marketingweek.com",
+                    "summary": "# AI expected to drive £18bn of UK digital ad spend by 2030. IAB UK forecasts AI will drive one-third of UK digital ad spend by 2030 as advertisers adapt to changes in search, content and media buying. One-third (32%) of UK digital ad spend, equivalent to around £18bn, will be AI-driven by 2030, according to new forecasts from IAB UK. According to ‘The State of AI in Advertising: Charting the Shift from Automation to Autonomy, ‘ AI is expected to influence ad spend across four key areas– content creation, zero-click search, agentic trading and agentic commerce. To estimate the likely scale of change, IAB UK developed a series of ‘AI overlays’ that estimate the proportion of media spend by channel that is ‘AI-driven’, defined as a media buying and delivery decision made by an AI-powered algorithm. IAB UK forecasts most of the growth will come from the adoption of AI buying tools in search, such as Google’s AI Max and PMax; social, including Meta’s Advantage+; and display advertising through agentic programmatic buying.",
+                    "score": 0.80069196
+                  },
+                  {
+                    "title": "DuckDuckGo launches no-AI search extensions after users reject Google's AI-first Search - TweakTown",
+                    "url": "https://www.tweaktown.com/news/111963/duckduckgo-launches-no-ai-search-extensions-after-users-reject-googles-ai-first-search/index.html",
+                    "source": "tweaktown.com",
+                    "summary": "# DuckDuckGo launches no-AI search extensions after users reject Google's AI-first Search. ## Traffic to DuckDuckGo's no-AI search page tripled after Google's overhaul, and the company is now making it even easier to ditch AI search entirely. **TL;DR:** Following Google's major AI-driven Search update, many users have shifted to DuckDuckGo, whose no-AI search traffic tripled and app installs surged. However, a significant number of users have pushed back against the **AI-heavy** direction and, in the process, many have ended up at DuckDuckGo. Traffic to DuckDuckGo's No AI search page tripled after Google's announcement and has continued to surge. To keep the momentum going, the company has now launched new browser extensions for Chrome and Firefox that let users set its AI-free search page, noai.duckduckgo.com, as their default search engine. From there, the Duck.ai chatbot can be disabled entirely, and the app can be set to open with a plain search interface by default every time.",
+                    "score": 0.7520126
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là một số tin tức nổi bật về AI trong hôm nay:\n\n1. **AI ad campaigns slam Trahan** - Một nhóm an toàn AI đã triển khai một chiến dịch quảng cáo lớn nhằm chỉ trích đại diện Lori Trahan (D-Massachusetts), cho rằng bà đang \"đứng về phía\" các ông lớn AI trong các nỗ lực lập pháp của mình. Nvidia cũng đã ra mắt một mô hình mô phỏng mới cho robot. [Đọc thêm](https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/) từ Washington Post.\n\n2. **OpenAI đối mặt với kiện tụng** - OpenAI đang trở thành tâm điểm của các vụ kiện trong ngành công nghệ. [Chi tiết tại đây](https://abovethelaw.com/2026/06/openai-is-latest-tech-company-in-the-litigation-hot-seat/2/) từ Above the Law.\n\n3. **Sam Altman nói về việc tuyển dụng** - CEO của OpenAI, Sam Altman, cho biết các công ty áp dụng AI nhiều nhất cũng là những công ty đang tuyển dụng nhiều nhất. Ông chỉ ra rằng những công ty công khai trích dẫn AI như lý do cho việc sa thải thường là những công ty ít áp dụng AI nhất. [Xem thêm](https://letsdatascience.com/news/sam-altman-says-ai-adopting-companies-are-hiring-132adf62).\n\n4. **Dự báo chi tiêu quảng cáo kỹ thuật số tại Vương quốc Anh** - AI được dự đoán sẽ thúc đẩy 18 tỷ bảng Anh trong chi tiêu quảng cáo kỹ thuật số của Vương quốc Anh vào năm 2030, chiếm một phần ba tổng chi tiêu quảng cáo. [Tìm hiểu thêm](https://www.marketingweek.com/iab-uk-ai-ad-spend/) từ Marketing Week.\n\n5. **DuckDuckGo ra mắt tiện ích tìm kiếm không AI** - DuckDuckGo đã chứng kiến lưu lượng truy cập đến trang tìm kiếm không AI của họ tăng gấp ba lần sau khi Google cập nhật tìm kiếm của mình theo hướng AI. Họ đã ra mắt các tiện ích mở rộng trình duyệt mới cho phép người dùng thiết lập trang tìm kiếm không AI làm mặc định. [Đọc thêm](https://www.tweaktown.com/news/111963/duckduckgo-launches-no-ai-search-extensions-after-users-reject-googles-ai-first-search/index.html) từ TweakTown.\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tin tức nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "lookup",
+          "args": {
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day"
+          },
+          "result": {
+            "tool": "web_search",
+            "query": "AI",
+            "topic": "news",
+            "timeframe": "day",
+            "items": [
+              {
+                "title": "AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan - The Washington Post",
+                "url": "https://www.washingtonpost.com/wp-intelligence/ai-tech-brief/2026/06/01/ai-tech-brief-exclusive-ai-ad-campaigns-slam-trahan/",
+                "source": "washingtonpost.com",
+                "summary": "AI & Tech Brief from WP Intelligence. # AI & Tech Brief: Exclusive | AI ad campaigns slam Trahan. Plus, Anthropic files for a blockbuster initial public offering. Make us preferred on Google. Sign up here to get this newsletter in your inbox. * **Exclusive:** AI safety group Americans for Responsible Innovation rolls out a six-figure ad campaign this week attacking Rep. Lori Trahan (D-Massachusetts), arguing that she’s “taking the side” of AI oligarchs in her bipartisan legislative efforts. * The AI safety community doesn’t want to hand power of AI regulation to President Donald Trump’s administration now that states are passing more rigorous AI laws — and the California and New York attorneys general are challenging big AI companies. * Nvidia is rolling out a new “world model” simulator for robots and a new design platform for robot developers. In doing so, the company is running the same business playbook it did to become so dominant in the chip market.",
+                "score": 0.8749346
+              },
+              {
+                "title": "OpenAI Is Latest Tech Company In The Litigation Hot Seat - Page 2 of 2 - Above the Law",
+                "url": "https://abovethelaw.com/2026/06/openai-is-latest-tech-company-in-the-litigation-hot-seat/2/",
+                "source": "abovethelaw.com",
+                "summary": "# OpenAI Is Latest Tech Company In The Litigation Hot Seat - Page 2 of 2 - Above the Law. Open navigationAbove the LawToggle Search. # OpenAI Is Latest Tech Company In The Litigation Hot Seat. ## More from Above the Law. ## From the Above the Law Network. Image 6: AI Artificial Intelligence (AI) Eve Legal Legal Tech Sponsored Content Technology. Image 7: Legal and operational leaders are gathering May 6–7 in Fort Lauderdale to confront the questions the industry hasn't answered—with a keynote from Amanda Knox setting the tone. This information might be about you, your preferences or your device and is mostly used to make the site work as you expect it to. However, blocking some types of cookies may impact your experience of the site and the services we are able to offer. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work.",
+                "score": 0.86339164
+              },
+              {
+                "title": "Sam Altman Says AI-Adopting Companies Are Hiring - Let's Data Science",
+                "url": "https://letsdatascience.com/news/sam-altman-says-ai-adopting-companies-are-hiring-132adf62",
+                "source": "letsdatascience.com",
+                "summary": "Business Insider reports that OpenAI CEO Sam Altman told CNBC on June 1, 2026, that \"the companies that I know that have adopted AI the most are also the ones hiring the most.\" Business Insider quotes Altman saying companies that publicly cite AI as a reason for layoffs tend to be adopting AI the least, and that AI can be a \"convenient way\" to explain layoffs. Business Insider reports that OpenAI CEO **Sam Altman** told CNBC on June 1, 2026, \"the companies that I know that have adopted AI the most are also the ones hiring the most.\" Business Insider quotes Altman as saying that companies publicly citing AI as a reason for layoffs \"are the ones adopting AI the least,\" and that AI can be a \"convenient way\" for companies to explain layoffs. Business Insider also lists recent layoffs at several tech companies and cites a March Pew Research Center poll that found elevated public concern about AI.",
+                "score": 0.81286734
+              },
+              {
+                "title": "AI expected to drive £18bn of UK digital ad spend by 2030 - Marketing Week",
+                "url": "https://www.marketingweek.com/iab-uk-ai-ad-spend/",
+                "source": "marketingweek.com",
+                "summary": "# AI expected to drive £18bn of UK digital ad spend by 2030. IAB UK forecasts AI will drive one-third of UK digital ad spend by 2030 as advertisers adapt to changes in search, content and media buying. One-third (32%) of UK digital ad spend, equivalent to around £18bn, will be AI-driven by 2030, according to new forecasts from IAB UK. According to ‘The State of AI in Advertising: Charting the Shift from Automation to Autonomy, ‘ AI is expected to influence ad spend across four key areas– content creation, zero-click search, agentic trading and agentic commerce. To estimate the likely scale of change, IAB UK developed a series of ‘AI overlays’ that estimate the proportion of media spend by channel that is ‘AI-driven’, defined as a media buying and delivery decision made by an AI-powered algorithm. IAB UK forecasts most of the growth will come from the adoption of AI buying tools in search, such as Google’s AI Max and PMax; social, including Meta’s Advantage+; and display advertising through agentic programmatic buying.",
+                "score": 0.80069196
+              },
+              {
+                "title": "DuckDuckGo launches no-AI search extensions after users reject Google's AI-first Search - TweakTown",
+                "url": "https://www.tweaktown.com/news/111963/duckduckgo-launches-no-ai-search-extensions-after-users-reject-googles-ai-first-search/index.html",
+                "source": "tweaktown.com",
+                "summary": "# DuckDuckGo launches no-AI search extensions after users reject Google's AI-first Search. ## Traffic to DuckDuckGo's no-AI search page tripled after Google's overhaul, and the company is now making it even easier to ditch AI search entirely. **TL;DR:** Following Google's major AI-driven Search update, many users have shifted to DuckDuckGo, whose no-AI search traffic tripled and app installs surged. However, a significant number of users have pushed back against the **AI-heavy** direction and, in the process, many have ended up at DuckDuckGo. Traffic to DuckDuckGo's No AI search page tripled after Google's announcement and has continued to surge. To keep the momentum going, the company has now launched new browser extensions for Chrome and Firefox that let users set its AI-free search page, noai.duckduckgo.com, as their default search engine. From there, the Duck.ai chatbot can be disabled entirely, and the app can be set to open with a plain search interface by default every time.",
+                "score": 0.7520126
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T14:00:04"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-06-02T14:00:04",
+      "user": "Tom tat 5 tweet moi nhat giup minh",
+      "status": "answered",
+      "assistant_text": "Dưới đây là tóm tắt 5 tweet mới nhất từ OpenAI:\n\n1. **OpenAI frontier models and Codex now on AWS**  \n   OpenAI đã công bố rằng các mô hình frontier và Codex hiện đã có sẵn trên AWS, cho phép các doanh nghiệp xây dựng trên Amazon Bedrock với các quy trình bảo mật và tuân thủ mà họ đã sử dụng. Đây cũng là khởi đầu cho sự mở rộng khả năng của OpenAI trên AWS.  \n   [Xem thêm](https://x.com/OpenAI/status/2061564502160892138)  \n   - **Ngày**: 01/06/2026  \n   - **Lượt thích**: 3933, **Retweet**: 407, **Lượt xem**: 982729\n\n2. **AI cho phép nghiên cứu tự do hơn**  \n   AI có thể mang lại cho các nhà nghiên cứu tự do để theo đuổi những ý tưởng \"điên rồ\" hơn. Terence Tao cho biết AI tạo ra nhiều không gian hơn để thử nghiệm và khám phá những con đường bất ngờ.  \n   [Xem thêm](https://x.com/OpenAI/status/2060451757818601808)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 5893, **Retweet**: 634, **Lượt xem**: 1401586\n\n3. **AI giảm bớt khó khăn trong nghiên cứu**  \n   Trong cuộc trò chuyện với OpenAI, Terence đã phản ánh về một tương lai mà AI giảm bớt khó khăn trong nghiên cứu và mở rộng những gì các nhà toán học và khoa học có thể thử nghiệm.  \n   [Xem thêm](https://x.com/OpenAI/status/2060451760033214653)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 397, **Retweet**: 35, **Lượt xem**: 116926\n\n4. **Hỗ trợ Windows cho Codex**  \n   OpenAI thông báo rằng Codex giờ đây có thể hoạt động trên máy tính Windows, cho phép người dùng thực hiện các tác vụ từ xa qua ứng dụng ChatGPT.  \n   [Xem thêm](https://x.com/OpenAI/status/2060428604727771421)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 8745, **Retweet**: 951, **Lượt xem**: 1323179\n\n5. **Accelerating defensive progress in biology**  \n   OpenAI đã công bố các bước để tăng tốc tiến bộ phòng thủ trong sinh học, bao gồm việc ra mắt Rosalind Biodefense và mở rộng quyền truy cập vào GPT-Rosalind cho các đối tác chính phủ Mỹ và đồng minh.  \n   [Xem thêm](https://x.com/OpenAI/status/2060376598642405492)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 2163, **Retweet**: 222, **Lượt xem**: 398867\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tweet nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "OpenAI",
+                "limit": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "timeline",
+              "args": {
+                "screenname": "OpenAI",
+                "limit": 5
+              },
+              "result": {
+                "tool": "get_user_tweets",
+                "screenname": "OpenAI",
+                "items": [
+                  {
+                    "title": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new way to build on Amazon Bed",
+                    "summary": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new way to build on Amazon Bedrock with OpenAI through the security, compliance, and governance workflows they already use.\n\nThis is also the beginning of a broader expansion of OpenAI capabilities on AWS, including future availability for cybersecurity capabilities like Daybreak.\n\nhttps://t.co/vMws0YU6Q3",
+                    "url": "https://x.com/OpenAI/status/2061564502160892138",
+                    "source": "@OpenAI",
+                    "date": "Mon Jun 01 21:44:13 +0000 2026",
+                    "metrics": {
+                      "favorites": 3933,
+                      "retweets": 407,
+                      "views": "982729"
+                    }
+                  },
+                  {
+                    "title": "AI can give researchers the freedom to pursue “crazier” ideas.",
+                    "summary": "AI can give researchers the freedom to pursue “crazier” ideas.\n\nFor Terence Tao, AI creates more room to experiment, test unexpected paths, and discover what might otherwise stay out of reach. https://t.co/InXb9Ahq2Y",
+                    "url": "https://x.com/OpenAI/status/2060451757818601808",
+                    "source": "@OpenAI",
+                    "date": "Fri May 29 20:02:35 +0000 2026",
+                    "metrics": {
+                      "favorites": 5893,
+                      "retweets": 634,
+                      "views": "1401586"
+                    }
+                  },
+                  {
+                    "title": "In conversation with OpenAI’s @markchen90, Terence reflects on a future where AI reduces the cognitive friction of resea",
+                    "summary": "In conversation with OpenAI’s @markchen90, Terence reflects on a future where AI reduces the cognitive friction of research, helps preserve the paths behind discovery, and expands what mathematicians and scientists can attempt. \nhttps://t.co/0elJITP8XT",
+                    "url": "https://x.com/OpenAI/status/2060451760033214653",
+                    "source": "@OpenAI",
+                    "date": "Fri May 29 20:02:35 +0000 2026",
+                    "metrics": {
+                      "favorites": 397,
+                      "retweets": 35,
+                      "views": "116926"
+                    }
+                  },
+                  {
+                    "title": "Windows users, this one’s for you.",
+                    "summary": "Windows users, this one’s for you.\n\nComputer use now works on Windows, so Codex can take action on your Windows computer.\n\nAnd with Windows support for Codex in the ChatGPT mobile app, you can start, review, and steer tasks on the go while work continues on your Windows machine.\n\nAn early experience, but we’re working on more ways to keep your work moving, wherever you are.",
+                    "url": "https://x.com/OpenAI/status/2060428604727771421",
+                    "source": "@OpenAI",
+                    "date": "Fri May 29 18:30:34 +0000 2026",
+                    "metrics": {
+                      "favorites": 8745,
+                      "retweets": 951,
+                      "views": "1323179"
+                    }
+                  },
+                  {
+                    "title": "We’re taking steps to accelerate defensive progress in biology:",
+                    "summary": "We’re taking steps to accelerate defensive progress in biology:\n\n- Launching Rosalind Biodefense to help trusted builders develop new biodefense and pandemic preparedness capabilities. \n- Expanding trusted access to GPT-Rosalind for select U.S. government and allied partners supporting public health and biodefense missions. \nAdvances in biology can strengthen our ability to prevent, detect, and respond to biological threats.   Our goal is to help build a more robust ecosystem – giving trusted defenders frontier AI to develop and operate new defenses for public health and biodefense. \n\nhttps://t.co/CT4muTSOOZ",
+                    "url": "https://x.com/OpenAI/status/2060376598642405492",
+                    "source": "@OpenAI",
+                    "date": "Fri May 29 15:03:55 +0000 2026",
+                    "metrics": {
+                      "favorites": 2163,
+                      "retweets": 222,
+                      "views": "398867"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là tóm tắt 5 tweet mới nhất từ OpenAI:\n\n1. **OpenAI frontier models and Codex now on AWS**  \n   OpenAI đã công bố rằng các mô hình frontier và Codex hiện đã có sẵn trên AWS, cho phép các doanh nghiệp xây dựng trên Amazon Bedrock với các quy trình bảo mật và tuân thủ mà họ đã sử dụng. Đây cũng là khởi đầu cho sự mở rộng khả năng của OpenAI trên AWS.  \n   [Xem thêm](https://x.com/OpenAI/status/2061564502160892138)  \n   - **Ngày**: 01/06/2026  \n   - **Lượt thích**: 3933, **Retweet**: 407, **Lượt xem**: 982729\n\n2. **AI cho phép nghiên cứu tự do hơn**  \n   AI có thể mang lại cho các nhà nghiên cứu tự do để theo đuổi những ý tưởng \"điên rồ\" hơn. Terence Tao cho biết AI tạo ra nhiều không gian hơn để thử nghiệm và khám phá những con đường bất ngờ.  \n   [Xem thêm](https://x.com/OpenAI/status/2060451757818601808)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 5893, **Retweet**: 634, **Lượt xem**: 1401586\n\n3. **AI giảm bớt khó khăn trong nghiên cứu**  \n   Trong cuộc trò chuyện với OpenAI, Terence đã phản ánh về một tương lai mà AI giảm bớt khó khăn trong nghiên cứu và mở rộng những gì các nhà toán học và khoa học có thể thử nghiệm.  \n   [Xem thêm](https://x.com/OpenAI/status/2060451760033214653)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 397, **Retweet**: 35, **Lượt xem**: 116926\n\n4. **Hỗ trợ Windows cho Codex**  \n   OpenAI thông báo rằng Codex giờ đây có thể hoạt động trên máy tính Windows, cho phép người dùng thực hiện các tác vụ từ xa qua ứng dụng ChatGPT.  \n   [Xem thêm](https://x.com/OpenAI/status/2060428604727771421)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 8745, **Retweet**: 951, **Lượt xem**: 1323179\n\n5. **Accelerating defensive progress in biology**  \n   OpenAI đã công bố các bước để tăng tốc tiến bộ phòng thủ trong sinh học, bao gồm việc ra mắt Rosalind Biodefense và mở rộng quyền truy cập vào GPT-Rosalind cho các đối tác chính phủ Mỹ và đồng minh.  \n   [Xem thêm](https://x.com/OpenAI/status/2060376598642405492)  \n   - **Ngày**: 29/05/2026  \n   - **Lượt thích**: 2163, **Retweet**: 222, **Lượt xem**: 398867\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tweet nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "OpenAI",
+            "limit": 5
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "screenname": "OpenAI",
+            "items": [
+              {
+                "title": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new way to build on Amazon Bed",
+                "summary": "OpenAI frontier models and Codex are now generally available on AWS, giving enterprises a new way to build on Amazon Bedrock with OpenAI through the security, compliance, and governance workflows they already use.\n\nThis is also the beginning of a broader expansion of OpenAI capabilities on AWS, including future availability for cybersecurity capabilities like Daybreak.\n\nhttps://t.co/vMws0YU6Q3",
+                "url": "https://x.com/OpenAI/status/2061564502160892138",
+                "source": "@OpenAI",
+                "date": "Mon Jun 01 21:44:13 +0000 2026",
+                "metrics": {
+                  "favorites": 3933,
+                  "retweets": 407,
+                  "views": "982729"
+                }
+              },
+              {
+                "title": "AI can give researchers the freedom to pursue “crazier” ideas.",
+                "summary": "AI can give researchers the freedom to pursue “crazier” ideas.\n\nFor Terence Tao, AI creates more room to experiment, test unexpected paths, and discover what might otherwise stay out of reach. https://t.co/InXb9Ahq2Y",
+                "url": "https://x.com/OpenAI/status/2060451757818601808",
+                "source": "@OpenAI",
+                "date": "Fri May 29 20:02:35 +0000 2026",
+                "metrics": {
+                  "favorites": 5893,
+                  "retweets": 634,
+                  "views": "1401586"
+                }
+              },
+              {
+                "title": "In conversation with OpenAI’s @markchen90, Terence reflects on a future where AI reduces the cognitive friction of resea",
+                "summary": "In conversation with OpenAI’s @markchen90, Terence reflects on a future where AI reduces the cognitive friction of research, helps preserve the paths behind discovery, and expands what mathematicians and scientists can attempt. \nhttps://t.co/0elJITP8XT",
+                "url": "https://x.com/OpenAI/status/2060451760033214653",
+                "source": "@OpenAI",
+                "date": "Fri May 29 20:02:35 +0000 2026",
+                "metrics": {
+                  "favorites": 397,
+                  "retweets": 35,
+                  "views": "116926"
+                }
+              },
+              {
+                "title": "Windows users, this one’s for you.",
+                "summary": "Windows users, this one’s for you.\n\nComputer use now works on Windows, so Codex can take action on your Windows computer.\n\nAnd with Windows support for Codex in the ChatGPT mobile app, you can start, review, and steer tasks on the go while work continues on your Windows machine.\n\nAn early experience, but we’re working on more ways to keep your work moving, wherever you are.",
+                "url": "https://x.com/OpenAI/status/2060428604727771421",
+                "source": "@OpenAI",
+                "date": "Fri May 29 18:30:34 +0000 2026",
+                "metrics": {
+                  "favorites": 8745,
+                  "retweets": 951,
+                  "views": "1323179"
+                }
+              },
+              {
+                "title": "We’re taking steps to accelerate defensive progress in biology:",
+                "summary": "We’re taking steps to accelerate defensive progress in biology:\n\n- Launching Rosalind Biodefense to help trusted builders develop new biodefense and pandemic preparedness capabilities. \n- Expanding trusted access to GPT-Rosalind for select U.S. government and allied partners supporting public health and biodefense missions. \nAdvances in biology can strengthen our ability to prevent, detect, and respond to biological threats.   Our goal is to help build a more robust ecosystem – giving trusted defenders frontier AI to develop and operate new defenses for public health and biodefense. \n\nhttps://t.co/CT4muTSOOZ",
+                "url": "https://x.com/OpenAI/status/2060376598642405492",
+                "source": "@OpenAI",
+                "date": "Fri May 29 15:03:55 +0000 2026",
+                "metrics": {
+                  "favorites": 2163,
+                  "retweets": 222,
+                  "views": "398867"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T14:00:34"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-06-02T14:00:34",
+      "user": "Cua Andrej Karpathy nhe",
+      "status": "answered",
+      "assistant_text": "Dưới đây là 5 tweet mới nhất từ Andrej Karpathy:\n\n1. **Gia nhập Anthropic**  \n   \"Cập nhật cá nhân: Tôi đã gia nhập Anthropic. Tôi nghĩ rằng vài năm tới ở rìa của LLM sẽ đặc biệt hình thành. Tôi rất hào hứng khi gia nhập đội ngũ ở đây và quay lại với R&D. Tôi vẫn đam mê giáo dục và dự định sẽ tiếp tục công việc của mình trong thời gian tới.\"  \n   [Xem tweet](https://x.com/karpathy/status/2056753169888334312)  \n   - **Ngày**: 19/05/2026  \n   - **Lượt thích**: 149502, **Retweet**: 11161, **Lượt xem**: 27351530\n\n2. **Cách sử dụng LLM hiệu quả**  \n   \"Cách này hoạt động rất tốt, hãy yêu cầu LLM của bạn 'cấu trúc phản hồi của bạn dưới dạng HTML', sau đó xem tệp được tạo trong trình duyệt của bạn. Tôi cũng đã có một số thành công khi yêu cầu LLM trình bày đầu ra của nó dưới dạng slideshow, v.v.\"  \n   [Xem tweet](https://x.com/karpathy/status/2053872850101285137)  \n   - **Ngày**: 11/05/2026  \n   - **Lượt thích**: 19139, **Retweet**: 2013, **Lượt xem**: 3751384\n\n3. **Trích dẫn yêu thích**  \n   \"Đây là câu trích dẫn mà tôi đã trích dẫn rất nhiều gần đây.\"  \n   [Xem tweet](https://x.com/karpathy/status/2049907410303865030)  \n   - **Ngày**: 30/04/2026  \n   - **Lượt thích**: 46525, **Retweet**: 4366, **Lượt xem**: 2553558\n\n4. **Cuộc trò chuyện tại Sequoia Ascent 2026**  \n   \"Cuộc trò chuyện bên lửa tại Sequoia Ascent 2026 từ khoảng một tuần trước. Một số điểm nổi bật: LLM không chỉ đơn thuần là tăng tốc những gì đã tồn tại trước đó.\"  \n   [Xem tweet](https://x.com/karpathy/status/2049903821095354523)  \n   - **Ngày**: 30/04/2026  \n   - **Lượt thích**: 6041, **Retweet**: 793, **Lượt xem**: 1164630\n\n5. **Công việc mới với @AlecRad và @DavidDuvenaud**  \n   \"RT @status_effects: Công việc mới với @AlecRad và @DavidDuvenaud: Bạn đã bao giờ mơ ước nói chuyện với ai đó từ quá khứ chưa?\"  \n   [Xem tweet](https://x.com/karpathy/status/2049180863036813717)  \n   - **Ngày**: 28/04/2026  \n   - **Lượt thích**: 0, **Retweet**: 391, **Lượt xem**: 84\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tweet nào, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "timeline",
+              "args": {
+                "screenname": "karpathy"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "timeline",
+              "args": {
+                "screenname": "karpathy"
+              },
+              "result": {
+                "tool": "get_user_tweets",
+                "screenname": "karpathy",
+                "items": [
+                  {
+                    "title": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative.",
+                    "summary": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&amp;D. I remain deeply passionate about education and plan to resume my work on it in time.",
+                    "url": "https://x.com/karpathy/status/2056753169888334312",
+                    "source": "@karpathy",
+                    "date": "Tue May 19 15:05:42 +0000 2026",
+                    "metrics": {
+                      "favorites": 149502,
+                      "retweets": 11161,
+                      "views": "27351530"
+                    }
+                  },
+                  {
+                    "title": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the ge",
+                    "summary": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the generated file in your browser. I've also had some success asking the LLM to present its output as slideshows, etc.\n\nMore generally, imo audio is the human-preferred input to AIs but vision (images/animations/video) is the preferred output from them. Around a ~third of our brains are a massively parallel processor dedicated to vision, it is the 10-lane superhighway of information into brain. As AI improves, I think we'll see a progression that takes advantage:\n\n1) raw text (hard/effortful to read)\n2) markdown (bold, italic, headings, tables, a bit easier on the eyes) <-- current default\n3) HTML (still procedural with underlying code, but a lot more flexibility on the graphics, layout, even interactivity) <-- early but forming new good default\n...4,5,6,...\nn) interactive neural videos/simulations\n\nImo the extrapolation (though the technology doesn't exist just yet) ends in some kind of interactive videos generated directly by a diffusion neural net. Many open questions as to how exact/procedural \"Software 1.0\" artifacts (e.g. interactive simulations) may be woven together with neural artifacts (diffusion grids), but generally something in the direction of the recently viral https://t.co/z21CP5iQfu\n\nThere are also improvements necessary and pending at the input. Audio nor text nor video alone are not enough, e.g. I feel a need to point/gesture to things on the screen, similar to all the things you would do with a person physically next to you and your computer screen.\n\nTLDR The input/output mind meld between humans and AIs is ongoing and there is a lot of work to do and significant progress to be made, way before jumping all the way into neuralink-esque BCIs and all that. For what's worth exploring at the current stage, hot tip try ask for HTML.",
+                    "url": "https://x.com/karpathy/status/2053872850101285137",
+                    "source": "@karpathy",
+                    "date": "Mon May 11 16:20:21 +0000 2026",
+                    "metrics": {
+                      "favorites": 19139,
+                      "retweets": 2013,
+                      "views": "3751384"
+                    }
+                  },
+                  {
+                    "title": "This is the the quote I've been citing a lot recently.",
+                    "summary": "This is the the quote I've been citing a lot recently.",
+                    "url": "https://x.com/karpathy/status/2049907410303865030",
+                    "source": "@karpathy",
+                    "date": "Thu Apr 30 17:43:06 +0000 2026",
+                    "metrics": {
+                      "favorites": 46525,
+                      "retweets": 4366,
+                      "views": "2553558"
+                    }
+                  },
+                  {
+                    "title": "Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights:",
+                    "summary": "Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights:\n\nThe first theme I tried to push on is that LLMs are about a lot more than just speeding up what existed before (e.g. coding). Three examples of new horizons:\n\n1. menugen: an app that can be fully engulfed by LLMs, with no classical code needed: input an image, output an image and an LLM can natively do the thing.\n2. install .md skills instead of install .sh scripts. Why create a complex Software 1.0 bash script for e.g. installing a piece of software if you can write the installation out in words and say \"just show this to your LLM\".  The LLM is an advanced interpreter of English and can intelligently target installation to your setup, debug everything inline, etc.\n3. LLM knowledge bases as an example of something that was *impossible* with classical code because it's computation over unstructured data (knowledge) from arbitrary sources and in arbitrary formats, including simply text articles etc.\n\nI pushed on these because in every new paradigm change, the obvious things are always in the realm of speeding up or somehow improving what existed, but here we have examples of functionality that either suddenly perhaps shouldn't even exist (1,2), or was fundamentally not possible before (3).\n\nThe second (ongoing) theme is trying to explain the pattern of jaggedness in LLMs. How it can be true that a single artifact will simultaneously 1) coherently refactor a 100,000-line code base *and* 2) tell you to walk to the car wash to wash your car. I previously wrote about the source of this as having to do with verifiability of a domain, here I expand on this as having to also do with economics because revenue/TAM dictates what the frontier labs choose to package into training data distributions during RL. You're either in the data distribution (on the rails of the RL circuits) and flying or you're off-roading in the jungle with a machete, in relative terms. Still not 100% satisfied with this, but it's an ongoing struggle to build an accurate model of LLM capabilities if you wish to practically take advantage of their power while avoiding their pitfalls, which brings me to...\n\nLast theme is the agent-native economy. The decomposition of products and services into sensors, actuators and logic (split up across all of 1.0/2.0/3.0 computing paradigms), how we can make information maximally legible to LLMs, some words on the quickly emerging agentic engineering and its skill set, related hiring practices, etc., possibly even hints/dreams of fully neural computing handling the vast majority of computation with some help from (classical) CPU coprocessors.",
+                    "url": "https://x.com/karpathy/status/2049903821095354523",
+                    "source": "@karpathy",
+                    "date": "Thu Apr 30 17:28:50 +0000 2026",
+                    "metrics": {
+                      "favorites": 6041,
+                      "retweets": 793,
+                      "views": "1164630"
+                    }
+                  },
+                  {
+                    "title": "RT @status_effects: New work with @AlecRad and @DavidDuvenaud:",
+                    "summary": "RT @status_effects: New work with @AlecRad and @DavidDuvenaud:\n\nHave you ever dreamed of talking to someone from the past? Introducing talk…",
+                    "url": "https://x.com/karpathy/status/2049180863036813717",
+                    "source": "@karpathy",
+                    "date": "Tue Apr 28 17:36:04 +0000 2026",
+                    "metrics": {
+                      "favorites": 0,
+                      "retweets": 391,
+                      "views": "84"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Dưới đây là 5 tweet mới nhất từ Andrej Karpathy:\n\n1. **Gia nhập Anthropic**  \n   \"Cập nhật cá nhân: Tôi đã gia nhập Anthropic. Tôi nghĩ rằng vài năm tới ở rìa của LLM sẽ đặc biệt hình thành. Tôi rất hào hứng khi gia nhập đội ngũ ở đây và quay lại với R&D. Tôi vẫn đam mê giáo dục và dự định sẽ tiếp tục công việc của mình trong thời gian tới.\"  \n   [Xem tweet](https://x.com/karpathy/status/2056753169888334312)  \n   - **Ngày**: 19/05/2026  \n   - **Lượt thích**: 149502, **Retweet**: 11161, **Lượt xem**: 27351530\n\n2. **Cách sử dụng LLM hiệu quả**  \n   \"Cách này hoạt động rất tốt, hãy yêu cầu LLM của bạn 'cấu trúc phản hồi của bạn dưới dạng HTML', sau đó xem tệp được tạo trong trình duyệt của bạn. Tôi cũng đã có một số thành công khi yêu cầu LLM trình bày đầu ra của nó dưới dạng slideshow, v.v.\"  \n   [Xem tweet](https://x.com/karpathy/status/2053872850101285137)  \n   - **Ngày**: 11/05/2026  \n   - **Lượt thích**: 19139, **Retweet**: 2013, **Lượt xem**: 3751384\n\n3. **Trích dẫn yêu thích**  \n   \"Đây là câu trích dẫn mà tôi đã trích dẫn rất nhiều gần đây.\"  \n   [Xem tweet](https://x.com/karpathy/status/2049907410303865030)  \n   - **Ngày**: 30/04/2026  \n   - **Lượt thích**: 46525, **Retweet**: 4366, **Lượt xem**: 2553558\n\n4. **Cuộc trò chuyện tại Sequoia Ascent 2026**  \n   \"Cuộc trò chuyện bên lửa tại Sequoia Ascent 2026 từ khoảng một tuần trước. Một số điểm nổi bật: LLM không chỉ đơn thuần là tăng tốc những gì đã tồn tại trước đó.\"  \n   [Xem tweet](https://x.com/karpathy/status/2049903821095354523)  \n   - **Ngày**: 30/04/2026  \n   - **Lượt thích**: 6041, **Retweet**: 793, **Lượt xem**: 1164630\n\n5. **Công việc mới với @AlecRad và @DavidDuvenaud**  \n   \"RT @status_effects: Công việc mới với @AlecRad và @DavidDuvenaud: Bạn đã bao giờ mơ ước nói chuyện với ai đó từ quá khứ chưa?\"  \n   [Xem tweet](https://x.com/karpathy/status/2049180863036813717)  \n   - **Ngày**: 28/04/2026  \n   - **Lượt thích**: 0, **Retweet**: 391, **Lượt xem**: 84\n\nNếu bạn cần thêm thông tin chi tiết về bất kỳ tweet nào, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "timeline",
+          "args": {
+            "screenname": "karpathy"
+          },
+          "result": {
+            "tool": "get_user_tweets",
+            "screenname": "karpathy",
+            "items": [
+              {
+                "title": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative.",
+                "summary": "Personal update: I've joined Anthropic. I think the next few years at the frontier of LLMs will be especially formative. I am very excited to join the team here and get back to R&amp;D. I remain deeply passionate about education and plan to resume my work on it in time.",
+                "url": "https://x.com/karpathy/status/2056753169888334312",
+                "source": "@karpathy",
+                "date": "Tue May 19 15:05:42 +0000 2026",
+                "metrics": {
+                  "favorites": 149502,
+                  "retweets": 11161,
+                  "views": "27351530"
+                }
+              },
+              {
+                "title": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the ge",
+                "summary": "This works really well btw, at the end of your query ask your LLM to \"structure your response as HTML\", then view the generated file in your browser. I've also had some success asking the LLM to present its output as slideshows, etc.\n\nMore generally, imo audio is the human-preferred input to AIs but vision (images/animations/video) is the preferred output from them. Around a ~third of our brains are a massively parallel processor dedicated to vision, it is the 10-lane superhighway of information into brain. As AI improves, I think we'll see a progression that takes advantage:\n\n1) raw text (hard/effortful to read)\n2) markdown (bold, italic, headings, tables, a bit easier on the eyes) <-- current default\n3) HTML (still procedural with underlying code, but a lot more flexibility on the graphics, layout, even interactivity) <-- early but forming new good default\n...4,5,6,...\nn) interactive neural videos/simulations\n\nImo the extrapolation (though the technology doesn't exist just yet) ends in some kind of interactive videos generated directly by a diffusion neural net. Many open questions as to how exact/procedural \"Software 1.0\" artifacts (e.g. interactive simulations) may be woven together with neural artifacts (diffusion grids), but generally something in the direction of the recently viral https://t.co/z21CP5iQfu\n\nThere are also improvements necessary and pending at the input. Audio nor text nor video alone are not enough, e.g. I feel a need to point/gesture to things on the screen, similar to all the things you would do with a person physically next to you and your computer screen.\n\nTLDR The input/output mind meld between humans and AIs is ongoing and there is a lot of work to do and significant progress to be made, way before jumping all the way into neuralink-esque BCIs and all that. For what's worth exploring at the current stage, hot tip try ask for HTML.",
+                "url": "https://x.com/karpathy/status/2053872850101285137",
+                "source": "@karpathy",
+                "date": "Mon May 11 16:20:21 +0000 2026",
+                "metrics": {
+                  "favorites": 19139,
+                  "retweets": 2013,
+                  "views": "3751384"
+                }
+              },
+              {
+                "title": "This is the the quote I've been citing a lot recently.",
+                "summary": "This is the the quote I've been citing a lot recently.",
+                "url": "https://x.com/karpathy/status/2049907410303865030",
+                "source": "@karpathy",
+                "date": "Thu Apr 30 17:43:06 +0000 2026",
+                "metrics": {
+                  "favorites": 46525,
+                  "retweets": 4366,
+                  "views": "2553558"
+                }
+              },
+              {
+                "title": "Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights:",
+                "summary": "Fireside chat at Sequoia Ascent 2026 from a ~week ago. Some highlights:\n\nThe first theme I tried to push on is that LLMs are about a lot more than just speeding up what existed before (e.g. coding). Three examples of new horizons:\n\n1. menugen: an app that can be fully engulfed by LLMs, with no classical code needed: input an image, output an image and an LLM can natively do the thing.\n2. install .md skills instead of install .sh scripts. Why create a complex Software 1.0 bash script for e.g. installing a piece of software if you can write the installation out in words and say \"just show this to your LLM\".  The LLM is an advanced interpreter of English and can intelligently target installation to your setup, debug everything inline, etc.\n3. LLM knowledge bases as an example of something that was *impossible* with classical code because it's computation over unstructured data (knowledge) from arbitrary sources and in arbitrary formats, including simply text articles etc.\n\nI pushed on these because in every new paradigm change, the obvious things are always in the realm of speeding up or somehow improving what existed, but here we have examples of functionality that either suddenly perhaps shouldn't even exist (1,2), or was fundamentally not possible before (3).\n\nThe second (ongoing) theme is trying to explain the pattern of jaggedness in LLMs. How it can be true that a single artifact will simultaneously 1) coherently refactor a 100,000-line code base *and* 2) tell you to walk to the car wash to wash your car. I previously wrote about the source of this as having to do with verifiability of a domain, here I expand on this as having to also do with economics because revenue/TAM dictates what the frontier labs choose to package into training data distributions during RL. You're either in the data distribution (on the rails of the RL circuits) and flying or you're off-roading in the jungle with a machete, in relative terms. Still not 100% satisfied with this, but it's an ongoing struggle to build an accurate model of LLM capabilities if you wish to practically take advantage of their power while avoiding their pitfalls, which brings me to...\n\nLast theme is the agent-native economy. The decomposition of products and services into sensors, actuators and logic (split up across all of 1.0/2.0/3.0 computing paradigms), how we can make information maximally legible to LLMs, some words on the quickly emerging agentic engineering and its skill set, related hiring practices, etc., possibly even hints/dreams of fully neural computing handling the vast majority of computation with some help from (classical) CPU coprocessors.",
+                "url": "https://x.com/karpathy/status/2049903821095354523",
+                "source": "@karpathy",
+                "date": "Thu Apr 30 17:28:50 +0000 2026",
+                "metrics": {
+                  "favorites": 6041,
+                  "retweets": 793,
+                  "views": "1164630"
+                }
+              },
+              {
+                "title": "RT @status_effects: New work with @AlecRad and @DavidDuvenaud:",
+                "summary": "RT @status_effects: New work with @AlecRad and @DavidDuvenaud:\n\nHave you ever dreamed of talking to someone from the past? Introducing talk…",
+                "url": "https://x.com/karpathy/status/2049180863036813717",
+                "source": "@karpathy",
+                "date": "Tue Apr 28 17:36:04 +0000 2026",
+                "metrics": {
+                  "favorites": 0,
+                  "retweets": 391,
+                  "views": "84"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T14:01:05"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-06-02T14:01:05",
+      "user": "Dang ban tin tren len Telegram di",
+      "status": "waiting_for_user",
+      "assistant_text": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "clarify",
+              "args": {
+                "question": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+                "response_type": "yes_no"
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "clarify",
+              "args": {
+                "question": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+                "response_type": "yes_no"
+              },
+              "result": {
+                "tool": "ask_user",
+                "question": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+                "response_type": "yes_no",
+                "options": [],
+                "awaiting_user": true
+              }
+            }
+          ]
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "clarify",
+          "args": {
+            "question": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+            "response_type": "yes_no"
+          },
+          "result": {
+            "tool": "ask_user",
+            "question": "Bạn có chắc chắn muốn gửi bản tin này lên Telegram không?",
+            "response_type": "yes_no",
+            "options": [],
+            "awaiting_user": true
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T14:01:08"
+    }
+  ]
+}

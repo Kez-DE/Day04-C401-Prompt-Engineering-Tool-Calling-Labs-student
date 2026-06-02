@@ -17,6 +17,8 @@ from .policy.tool import search_company_policy
 from .social_search.tool import search_tweets
 from .send.tool import send_telegram
 from .lookup.tool import web_search
+from .hacker_news.tool import get_hacker_news
+from .wikipedia.tool import wikipedia_search
 
 
 # NOTE (starter_v0): tool names here are intentionally vague. These keys are the
@@ -35,6 +37,8 @@ TOOL_FUNCTIONS = {
     "policy": search_company_policy,
     "papers": arxiv_search,
     "paper_text": get_arxiv_paper_text,
+    "hacker_news": get_hacker_news,
+    "wikipedia": wikipedia_search,
 }
 
 

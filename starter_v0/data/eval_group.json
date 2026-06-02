@@ -3,5 +3,182 @@
   "dataset_role": "group",
   "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. Mỗi case cần: id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true). Nên kèm metadata.what_it_tests.",
   "allowed_failure_types": ["wrong_tool", "wrong_arg_value", "wrong_boundary", "unnecessary_tool", "out_of_scope", "missing_info"],
-  "cases": []
+  "cases": [
+    {
+      "id": "G01_hn_top_routing",
+      "phase": "B",
+      "query": "Cho mình xem top stories trên Hacker News",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {"feed": "top"}}
+        ]
+      },
+      "metadata": {
+        "skill": "hacker_news_routing",
+        "difficulty": "easy",
+        "what_it_tests": "User nhắc đến 'Hacker News' → phải dùng hacker_news tool, không dùng lookup/social_search."
+      }
+    },
+    {
+      "id": "G02_hn_new_feed_arg",
+      "phase": "B",
+      "query": "Tin mới nhất trên Hacker News là gì?",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {"feed": "new"}}
+        ]
+      },
+      "metadata": {
+        "skill": "hacker_news_feed_arg",
+        "difficulty": "medium",
+        "what_it_tests": "'mới nhất' → feed=new, không phải feed=top (default)."
+      }
+    },
+    {
+      "id": "G03_hn_best_limit_arg",
+      "phase": "B",
+      "query": "Lấy 3 bài best của Hacker News cho mình",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {"feed": "best", "limit": 3}}
+        ]
+      },
+      "metadata": {
+        "skill": "hacker_news_args",
+        "difficulty": "medium",
+        "what_it_tests": "Trích đúng feed=best và limit=3 từ câu hỏi."
+      }
+    },
+    {
+      "id": "G04_vague_account_clarify",
+      "phase": "B",
+      "query": "Lấy tweet mới nhất của chuyên gia AI đó cho mình",
+      "failure_type": "missing_info",
+      "expect": {
+        "tool_calls": [
+          {"name": "clarify", "args": {"response_type": "text"}}
+        ]
+      },
+      "metadata": {
+        "skill": "clarify_vague_account",
+        "difficulty": "medium",
+        "what_it_tests": "Tham chiếu mơ hồ 'chuyên gia AI đó' không rõ là ai → phải hỏi lại, không được đoán handle."
+      }
+    },
+    {
+      "id": "G05_hn_and_social_parallel",
+      "phase": "B",
+      "query": "Tìm tin AI trên Hacker News và tìm tweet về AI cùng lúc",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {}},
+          {"name": "social_search", "args": {"query": "AI"}}
+        ]
+      },
+      "metadata": {
+        "skill": "parallel_hn_plus_social",
+        "difficulty": "hard",
+        "what_it_tests": "Yêu cầu 2 nguồn cùng lúc → gọi song song hacker_news và social_search; eval không phụ thuộc thứ tự."
+      }
+    },
+    {
+      "id": "G06_mt_hn_carry_limit",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Cho mình 7 bài HN trending"},
+        {"role": "user", "content": "Bây giờ đổi sang xem 7 bài mới nhất (new) nhé"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {"feed": "new", "limit": 7}}
+        ]
+      },
+      "metadata": {
+        "skill": "multiturn_carry_limit_hn",
+        "difficulty": "medium",
+        "what_it_tests": "Carry limit=7 từ lượt 1 + đổi feed sang new ở lượt 2."
+      }
+    },
+    {
+      "id": "G07_mt_send_confirm_after_lookup",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Tìm tin AI hôm nay trên web"},
+        {"role": "user", "content": "Hay đó, gửi tóm tắt lên Telegram đi"}
+      ],
+      "failure_type": "wrong_boundary",
+      "expect": {
+        "tool_calls": [
+          {"name": "clarify", "args": {"response_type": "yes_no"}}
+        ]
+      },
+      "metadata": {
+        "skill": "multiturn_send_confirm",
+        "difficulty": "medium",
+        "what_it_tests": "Sau khi research xong, user muốn gửi → phải hỏi xác nhận trước (clarify yes_no), không tự gửi."
+      }
+    },
+    {
+      "id": "G08_mt_vague_then_specify_hn",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Lấy tin trending cho mình"},
+        {"role": "user", "content": "Trên Hacker News ý, lấy 5 bài top"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {"name": "hacker_news", "args": {"feed": "top", "limit": 5}}
+        ]
+      },
+      "metadata": {
+        "skill": "multiturn_clarify_then_hn",
+        "difficulty": "medium",
+        "what_it_tests": "Lượt 1 mơ hồ (trending ở đâu?), lượt 2 bổ sung 'Hacker News' → map đúng sang hacker_news tool với đúng args."
+      }
+    },
+    {
+      "id": "G09_mt_policy_source_citation",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Theo policy công ty, có được dùng arXiv làm nguồn tham khảo không?"},
+        {"role": "user", "content": "Tìm thêm về quy định trích dẫn nguồn chi tiết hơn đi"}
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {"name": "policy", "args": {"policy_area": "source_citation"}}
+        ]
+      },
+      "metadata": {
+        "skill": "multiturn_policy_citation",
+        "difficulty": "medium",
+        "what_it_tests": "Multi-turn policy query: lượt 2 hỏi về trích dẫn nguồn → policy với policy_area=source_citation."
+      }
+    },
+    {
+      "id": "G10_mt_hn_then_fetch",
+      "phase": "B",
+      "turns": [
+        {"role": "user", "content": "Cho mình xem top 1 bài HN hôm nay"},
+        {"role": "user", "content": "Đọc bài này giúp mình: https://openai.com/research/"}
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {"name": "fetch", "args": {"url": "https://openai.com/research/"}}
+        ]
+      },
+      "metadata": {
+        "skill": "multiturn_hn_then_fetch_url",
+        "difficulty": "medium",
+        "what_it_tests": "Sau khi lấy HN, user cung cấp URL cụ thể → dùng fetch với đúng URL từ message, không đoán URL."
+      }
+    }
+  ]
 }

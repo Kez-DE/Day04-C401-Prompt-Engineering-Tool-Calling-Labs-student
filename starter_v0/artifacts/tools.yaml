@@ -88,12 +88,16 @@ tools:
       required: [text]
 
   - name: policy
-    description: "Tìm trong tài liệu nội bộ."
+    description: "Tìm trong tài liệu nội bộ của công ty. Dùng khi user hỏi 'theo policy công ty', 'company policy', hoặc 'quy định nội bộ'. Chọn policy_area phù hợp: source_citation cho câu hỏi về xác nhận nguồn tin / fact-checking / tweet có phải nguồn hợp lệ không; ai_research cho câu hỏi về research workflow / quy trình nghiên cứu AI; data_privacy cho câu hỏi về API key / dữ liệu khách hàng / secrets; external_publishing cho câu hỏi về đăng/gửi nội dung ra ngoài (Telegram, social); tool_usage cho câu hỏi về cách dùng tool."
     parameters:
       type: object
       properties:
         query: {type: string, default: "", description: "Truy vấn"}
-        policy_area: {type: string, enum: [all, ai_research, source_citation, data_privacy, external_publishing, tool_usage], default: "all", description: "Nhóm"}
+        policy_area:
+          type: string
+          enum: [all, ai_research, source_citation, data_privacy, external_publishing, tool_usage]
+          default: "all"
+          description: "Nhóm policy: source_citation=xác nhận nguồn/fact/tweet; ai_research=quy trình nghiên cứu AI; data_privacy=API key/dữ liệu khách hàng; external_publishing=đăng/gửi ra ngoài; tool_usage=cách dùng tool"
         top_k: {type: integer, default: 3, description: "Số mục"}
       required: [query]
 
@@ -106,6 +110,25 @@ tools:
         max_results: {type: integer, default: 5, description: "Số lượng"}
         sort_by: {type: string, enum: [relevance, lastUpdatedDate, submittedDate], default: "relevance", description: "Sắp xếp"}
       required: [query]
+
+  - name: wikipedia
+    description: "Tìm kiếm và lấy tóm tắt bài viết từ Wikipedia. Dùng khi user hỏi về khái niệm, người nổi tiếng, sự kiện lịch sử, hoặc cần thông tin nền (background). KHÔNG dùng cho tin tức mới (dùng lookup) hay paper khoa học (dùng papers). Ví dụ: 'X là ai?', 'Giải thích khái niệm Y', 'Transformer là gì?'"
+    parameters:
+      type: object
+      properties:
+        query: {type: string, description: "Từ khóa tìm kiếm (tên người, khái niệm, sự kiện)"}
+        lang: {type: string, enum: [en, vi, fr, ja, zh], default: "en", description: "Ngôn ngữ Wikipedia: en=tiếng Anh (default), vi=tiếng Việt"}
+        sentences: {type: integer, default: 5, description: "Số câu tóm tắt muốn lấy"}
+      required: [query]
+
+  - name: hacker_news
+    description: "Lấy các bài đăng trending từ Hacker News. Dùng khi user hỏi về 'Hacker News', 'HN', 'tin tức công nghệ trên HN', hoặc muốn xem discussion của tech community. feed=top (default) cho bài phổ biến nhất, feed=new cho bài mới nhất, feed=best cho bài hay nhất lịch sử."
+    parameters:
+      type: object
+      properties:
+        feed: {type: string, enum: [top, new, best], default: "top", description: "Loại feed: top=trending, new=mới nhất, best=hay nhất"}
+        limit: {type: integer, default: 5, description: "Số bài muốn lấy"}
+      required: []
 
   - name: paper_text
     description: "Lấy nội dung text của một bài báo."
